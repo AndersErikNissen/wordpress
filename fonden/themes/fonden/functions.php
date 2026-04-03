@@ -55,16 +55,17 @@ function theme_schema( array $types = [] ):array {
         break; 
       
       case 'organization':
-        break;
+        $company = OptionPage::get( 'company' );
+        if ( $company ) {
+          $schema[] = [
+            '@type' => 'Organization',
+            'name'  => $company['name'] ?? '',
+            'url'   => home_url(),
+          ];
+        }
+        break; 
     }
   }
-
-
-  // $organization = [
-  //   '@type' => 'Organization',
-  //   'name'  => sts_option( 'company.name' ),
-  //   'url'   => home_url(),
-  // ];
 
   // $images = array_filter( [
   //   wp_get_attachment_image_url( $image_id, 'schema_1x1'  ),
@@ -83,13 +84,6 @@ function theme_schema( array $types = [] ):array {
 
   return $schema;
 }
-
-add_action( 'init', function() {
-    // Now it is safe to call your schema function
-    $my_schema = theme_schema( ['address'] );
-    // ... do something with it, like filter it into your head
-    print_r($my_schema);
-});
 
 // Injects
 add_action( 'get_footer', function() {

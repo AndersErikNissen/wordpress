@@ -21,6 +21,86 @@
             "selected": 0
         },
         {
+            "key": "field_69cf9a8f00a70",
+            "label": "Information",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_69cf9a9800a71",
+            "label": "",
+            "name": "company",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_69cf9a9800a72",
+                    "label": "Navn",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_69cf9abb00a78",
+                    "label": "CVR",
+                    "name": "cvr",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
             "key": "field_69ce7981da430",
             "label": "Addresse",
             "name": "",
@@ -55,27 +135,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69cf90fb3ee87",
-                    "label": "Bynavn",
-                    "name": "city",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_69cf91193ee88",
                     "label": "Bykode",
                     "name": "city_code",
@@ -99,11 +158,11 @@
                     "append": ""
                 },
                 {
-                    "key": "field_69cedea73cd10",
-                    "label": "Facadebillede",
-                    "name": "storefront_image",
+                    "key": "field_69cf90fb3ee87",
+                    "label": "Bynavn",
+                    "name": "city",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -112,17 +171,12 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
+                    "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "medium"
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 },
                 {
                     "key": "field_69ce7981e82d8",
@@ -186,6 +240,32 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_69cedea73cd10",
+                    "label": "Facadebillede",
+                    "name": "storefront_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium"
                 }
             ]
         },
@@ -226,7 +306,7 @@
                 {
                     "key": "field_69ced9683cd09",
                     "label": "Telefon",
-                    "name": "contact_phone",
+                    "name": "phone",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -247,7 +327,7 @@
                 {
                     "key": "field_69ced9f53cd0f",
                     "label": "E-mail",
-                    "name": "contact_email",
+                    "name": "email",
                     "aria-label": "",
                     "type": "email",
                     "instructions": "",
@@ -303,7 +383,7 @@
                 {
                     "key": "field_69cedf563cd15",
                     "label": "Facebook",
-                    "name": "social_media_facebook",
+                    "name": "facebook",
                     "aria-label": "",
                     "type": "url",
                     "instructions": "",
@@ -321,7 +401,7 @@
                 {
                     "key": "field_69cedf943cd16",
                     "label": "LinkedIn",
-                    "name": "social_media_linkedin",
+                    "name": "linkedin",
                     "aria-label": "",
                     "type": "url",
                     "instructions": "",
@@ -339,7 +419,7 @@
                 {
                     "key": "field_69cedf9d3cd17",
                     "label": "Instagram",
-                    "name": "social_media_instagram",
+                    "name": "instagram",
                     "aria-label": "",
                     "type": "url",
                     "instructions": "",
@@ -357,7 +437,7 @@
                 {
                     "key": "field_69cedfb93cd18",
                     "label": "Twitter",
-                    "name": "social_media_twitter",
+                    "name": "twitter",
                     "aria-label": "",
                     "type": "url",
                     "instructions": "",
@@ -447,7 +527,7 @@
                 {
                     "key": "field_69ce79820cf08",
                     "label": "Logo",
-                    "name": "header_logo",
+                    "name": "logo",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "Indsæt &lt;svg&gt; ... &lt;\/svg&gt;",
@@ -504,7 +584,7 @@
                 {
                     "key": "field_69cee27bb02de",
                     "label": "Logo",
-                    "name": "footer_logo",
+                    "name": "logo",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "Indsæt &lt;svg&gt; ... &lt;\/svg&gt;",
@@ -562,5 +642,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1775211326
+    "modified": 1775213329
 }

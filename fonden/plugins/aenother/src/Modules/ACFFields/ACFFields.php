@@ -45,10 +45,10 @@ class ACFFields extends BaseModule {
     // 2. Only load if we are editing a post/page
     if ( $screen->base === 'post' ) {
       wp_enqueue_style( 
-        'acf-admin-css', 
+        'aenother-acffields-acf-admin-css', 
         $this->get_url( 'css/acf-admin.css' ), 
         [], 
-        '1.0.0' 
+        filemtime( $this->get_path( 'css/acf-admin.css' ) ) 
       );
     }
   }
@@ -62,7 +62,7 @@ class ACFFields extends BaseModule {
   }
 
   public function add_editor_styles() {
-    add_editor_style( $this->get_url('css/acf-editor.css') );
+    add_editor_style( $this->get_url( 'css/acf-editor.css' ) );
   }
 
   /**

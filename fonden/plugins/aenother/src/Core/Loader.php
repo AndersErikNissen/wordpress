@@ -10,6 +10,7 @@ class Loader {
     'DisableComments\DisableComments',
     'DisableGutenberg\DisableGutenberg',
     'ACFFields\ACFFields',
+    'OptionPage\OptionPage',
   ];
 
   public function __construct() {

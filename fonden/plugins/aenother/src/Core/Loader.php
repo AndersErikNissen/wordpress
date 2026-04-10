@@ -23,7 +23,7 @@ class Loader {
         continue;
       }
 
-      $class = 'Aenother\\Modules\\' . $module; // e.g.
+      $class = 'Aenother\\Modules\\' . $module;
       
       if ( class_exists( $class ) ) {
         new $class();

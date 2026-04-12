@@ -14,12 +14,6 @@ class OptionPage extends BaseModule {
 
     // 2. Process ACF Form Data BEFORE the page loads
     add_action( 'admin_init', [ $this, 'handle_acf_form_submission' ] );
-
-    // 3. Load Assets
-    add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_acf_assets' ] );
-
-    // 4. Hide groups, if not on the admin page
-    add_filter( 'acf/prepare_field_group', [ $this, 'hide_acf_groups' ] );
   }
 
   public function register_custom_settings_page() {
@@ -50,20 +44,6 @@ class OptionPage extends BaseModule {
         'updated_message' => 'Nye indstillinger gemt!',
       ] ); 
     echo '</div>';
-  }
-
-  public function enqueue_acf_assets( $hook ) {
-    // Only load on this admin menu page
-    if ( $hook !== $this->settings_page_hook ) {
-      return;
-    }
-
-    wp_enqueue_style( 
-      'aenother-option-page-admin-core', 
-      $this->get_url( 'css/admin-core.css' ),
-      [], 
-      filemtime( $this->get_path( 'css/admin-core.css' ) ) 
-    );
   }
 
   /**

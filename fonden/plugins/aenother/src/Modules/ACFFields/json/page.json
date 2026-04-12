@@ -163,7 +163,7 @@
         },
         {
             "key": "field_69c5c9dbca327",
-            "label": "Hero",
+            "label": "Introduktion",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -182,7 +182,7 @@
         {
             "key": "field_69c5c06e7ca8c",
             "label": "",
-            "name": "section_hero",
+            "name": "section_introduction",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -195,6 +195,24 @@
             },
             "layout": "block",
             "sub_fields": [
+                {
+                    "key": "field_69dbb2d76b65f",
+                    "label": "Indhold",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
                 {
                     "key": "field_69c5c07d7ca8d",
                     "label": "Titel",
@@ -238,8 +256,96 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_69c5c1217ca8f",
+                    "key": "field_69dbb2e06b660",
+                    "label": "Knapper",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_69dbb2f16b661",
+                    "label": "",
+                    "name": "buttons",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69dbb3136b662",
+                            "label": "Knap (1)",
+                            "name": "button_1",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_69dbb34b6b663",
+                            "label": "Knap (2)",
+                            "name": "button_2",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_69dbb284979da",
                     "label": "Billede",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_69c5c1217ca8f",
+                    "label": "Vælg billede",
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
@@ -262,84 +368,6 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium"
-                },
-                {
-                    "key": "field_69c5c4d87ca92",
-                    "label": "Billedeformat",
-                    "name": "aspect_ratio",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_69c5c1757ca90",
-                            "label": "Computer",
-                            "name": "desktop",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "original": "Original",
-                                "square": "Kvadrat (1:1)",
-                                "banner": "Banner (3:1)",
-                                "wide": "Bred (3:2)",
-                                "landscape": "Landskab (16:9)",
-                                "portrait": "Portræt (9:16)"
-                            },
-                            "default_value": "original",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "horizontal",
-                            "save_other_choice": 0
-                        },
-                        {
-                            "key": "field_69c5c4a37ca91",
-                            "label": "Mobil og tablet",
-                            "name": "handheld",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "original": "Original",
-                                "square": "Kvadrat (1:1)",
-                                "banner": "Banner (3:1)",
-                                "wide": "Bred (3:2)",
-                                "landscape": "Landskab (16:9)",
-                                "portrait": "Portræt (9:16)"
-                            },
-                            "default_value": "original",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "horizontal",
-                            "save_other_choice": 0
-                        }
-                    ]
                 }
             ]
         },
@@ -1656,5 +1684,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1775167032
+    "modified": 1776007439
 }

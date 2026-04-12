@@ -38,16 +38,22 @@ class ACFFields extends BaseModule {
   /**
    * Enqueues CSS to style the ACF UI in the WordPress Backend
    */
-  public function enqueue_acf_admin_styles() {
-    // 1. Check if we are on a post edit screen
-    $screen = get_current_screen();
-    
-    // 2. Only load if we are editing a post/page
-    if ( $screen->base === 'post' ) {
-      wp_enqueue_style( 
-        'aenother-acffields-acf-admin-css', 
-        $this->get_url( 'css/acf-admin.css' ), 
-        [], 
+  public function enqueue_acf_admin_styles( $hook ) {
+    $screen = \get_current_screen();
+
+    if ( $screen->post_type === 'acf-field-group' ) {
+        return;
+    }
+
+    $is_editor = ( $screen->base === 'post' );
+
+    $is_options = ( strpos( $screen->id, 'aenother-option-page' ) !== false );
+
+    if ( $is_editor || $is_options ) {
+      \wp_enqueue_style(
+        'aenother-acf-custom',
+        $this->get_url( 'css/acf-admin.css' ),
+        [],
         filemtime( $this->get_path( 'css/acf-admin.css' ) ) 
       );
     }

@@ -34,56 +34,70 @@ add_action( 'after_setup_theme', function() {
   add_image_size( 'schema_16x9', 1200, 675,  true );
 } );
 
-// Helpers  
-function theme_schema( array $types = [] ):array {
-  $schema = [];
+// Schema.org
+add_action( 'wp_head', function() {
+  // Global schema
+  $company = OptionPage::get( 'company' );
+  $contact = OptionPage::get( 'contact' );
+
+  $website = [
+    '@type'       => 'WebSite',
+    '@id'         => home_url( '/#website' ),
+    'url'         => home_url(),
+    'name'        => get_bloginfo( 'name' ),
+    'description' => get_bloginfo( 'description' ),
+    'inLanguage'  => 'da',
+    'publisher'   => [ '@id' => home_url( '/#organization' ) ]
+  ];
+
+  $organization = [
+    '@type'       => [ 'NGO', 'FundingAgency' ],
+    '@id'         => home_url( '/#organization' ),
+    'url'         => home_url(),
+    'name'        => get_bloginfo( 'name' ),
+    'description' => get_bloginfo( 'description' ),
+  ];
+
+  if ( $company ) {
+    $email = $contact['email'] ?? null;
+    if ( $email ) $organization['email'] = $email;
   
-  foreach ( $types as $type ) {
-    switch( $type ) {
-      case 'address':
-        $address = OptionPage::get( 'address' );
-        if ( $address ) {
-          $schema[] = [
-            '@type'           => 'PostalAddress',
-            'streetAddress'   => $address['street']      ?? '',
-            'addressLocality' => $address['city']        ?? '',
-            'addressRegion'   => $address['region']      ?? '',
-            'postalCode'      => $address['postal_code'] ?? '',
-            'addressCountry'  => $address['country']     ?? '',
-          ];
-        }
-        break; 
-      
-      case 'organization':
-        $company = OptionPage::get( 'company' );
-        if ( $company ) {
-          $schema[] = [
-            '@type' => 'Organization',
-            'name'  => $company['name'] ?? '',
-            'url'   => home_url(),
-          ];
-        }
-        break; 
-    }
+    $founding_date = $company['founding_date'] ?? null;
+    if ( $founding_date ) $organization['foundingDate'] = $founding_date;
   }
 
-  // $images = array_filter( [
-  //   wp_get_attachment_image_url( $image_id, 'schema_1x1'  ),
-  //   wp_get_attachment_image_url( $image_id, 'schema_4x3'  ),
-  //   wp_get_attachment_image_url( $image_id, 'schema_16x9' ),
-  // ] );
+  // Page schema
+  $slug = get_post_field( 'post_name', get_queried_object_id() );
 
-  // // bread crumbs
+  $page_type = match( $slug ) {
+    'om-fonden',  'om-os'   => 'AboutPage',
+    'kontakt-os', 'kontakt' => 'ContactPage',
+    default                 => 'WebPage',
+  };
 
-  // $website = [
-  //   '@type' => 'WebSite',
-  //   '@id'   => home_url( '/#website' ),
-  //   'name'  => sts_option( 'company.name' ),
-  //   'url'   => home_url(),
-  // ];
+  $canonical = is_front_page() ? home_url( '/' ) : get_permalink( get_queried_object_id() );
 
-  return $schema;
-}
+  $page = [
+    '@type'       => is_front_page() ? 'WebPage' : $page_type,
+    '@id'         => $canonical . '#webpage',
+    'url'         => $canonical,
+    'name'        => get_the_title( get_queried_object_id() ) . ' — ' . get_bloginfo( 'name' ),
+    'isPartOf'    => [ '@id' => home_url( '/#website' ) ],
+    'about'       => [ '@id' => home_url( '/#organization' ) ],
+    'publisher'   => [ '@id' => home_url( '/#organization' ) ],
+    'inLanguage'  => 'da',
+  ];
+
+  // Output the schema
+  $graph = [
+    '@context' => 'https://schema.org',
+    '@graph'   => [ $organization, $website, $page ]
+  ];
+
+  echo '<script type="application/ld+json">'
+      . json_encode( $graph, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE )
+      . '</script>';
+} );
 
 // Injects
 add_action( 'get_footer', function() {

@@ -97,6 +97,29 @@
                     "step": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_69dc03774a98e",
+                    "label": "Grundlæggelsesår",
+                    "name": "founding_date",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -642,5 +665,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1775213329
+    "modified": 1776026555
 }

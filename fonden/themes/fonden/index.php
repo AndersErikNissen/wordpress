@@ -14,10 +14,6 @@ if ( have_posts() ) {
     } else {
       // 404...
     }
-    
-    echo '<script type="application/ld+json">'
-      . json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE )
-      . '</script>';
   }
 }
 

@@ -5,8 +5,358 @@
   Author URI: https://aenders.dk/
 */
 
-@layer sections;
+:root {
+  --color-forest: #084734;
+  --color-moss: #3C660E;
+  --color-apple: #D9F692;
+  --color-honeydew: #F3FAE7;
+  --color-magenta: #B742F5;
+
+  --transition-hover: 200ms ease-in;
+
+  --pw: 928px;
+}
+
+@layer normalize, typography, rte, grid, sections, components;
+
+@layer normalize {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+  }
+
+  em, 
+  i {
+    font-style: normal;
+  }
+
+  body {
+    line-height: 1;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: inherit;
+    overflow-wrap: break-word;
+    font-weight: inherit;
+  }
+
+  p {
+    text-wrap: pretty;
+    line-height: 1.55;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    text-align: inherit;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    font: inherit;
+  }
+
+  svg {
+    /* Bug(Old Safari): SVG incorrect placement */
+    -webkit-transform: translate(0px, 0px);
+  }
+
+  select {
+    /* Reset appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Reset box model */
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+
+    /* Reset typography */
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    /* Misc */
+    cursor: pointer;
+    box-shadow: none;
+  }
+}
+
+@layer typography {
+  @font-face {
+    font-family: 'Instrumental Sans';
+    src: url('/fonts/instrumental-sans_variable.woff2') format('woff2') tech('variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Lora';
+    src: url('/fonts/lora_variable.woff2') format('woff2') tech('variations');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Instrumental Sans', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    color: var(--color-forest);
+    background-color: var(--color-honeydew);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4 {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    line-height: 1.25;
+  }
+}
+
+@layer rte {
+  .rte > * + * {
+      margin-top: 1.25rem;
+  }
+
+  .rte h2 { 
+    margin-top: 5rem; 
+    margin-bottom: 3rem;
+  }
+
+  .rte h3 { 
+    margin-top: 3.5rem; 
+  }
+
+  .rte figure,
+  .rte blockquote,
+  .rte img {
+    margin: 2rem 0;
+  }
+
+  .rte p { 
+    line-height: 1.6; 
+  }
+
+  .ul,
+  .rte ul {
+    list-style: none;
+    padding-left: 1.5em;
+  }
+
+  .ul li,
+  .rte ul li {
+    position: relative;
+    margin-bottom: 0.5em;
+  }
+
+  .ul li::before,
+  .rte ul li::before {
+    content: '';
+    position: absolute;
+    left: -1.2em;
+    top: 0.4em;
+    width: 0.5em;
+    height: 0.5em;
+    border: 1.5px solid currentColor;
+    background-color: transparent;
+    transform: rotate(45deg);
+  }
+
+  .rte ol {
+    list-style-type: decimal;
+  }
+
+  .rte ul,
+  .rte ol {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .rte ul ul, 
+  .rte ol ol, 
+  .rte ul ol, 
+  .rte ol ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .rte ul ul {
+    list-style-type: circle;
+  }
+
+  .rte li + li {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .rte img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .rte figure {
+    text-align: center;
+  }
+
+  .rte figcaption {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+
+  .rte blockquote {
+    border-left: 4px solid var(--color-black);
+    padding: 1rem 0 1rem 2rem;
+    font-style: italic;
+  }
+
+  .rte .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .rte .gallery-columns-1 {
+      grid-template-columns: 1fr;
+    }
+  
+    .rte .gallery-columns-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .rte .gallery-columns-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .rte .gallery-columns-4,
+    .rte .gallery-columns-5,
+    .rte .gallery-columns-6,
+    .rte .gallery-columns-7,
+    .rte .gallery-columns-8,
+    .rte .gallery-columns-9 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@layer grid {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: var(--pw);
+    margin: 0 auto;
+  }
+
+  .grid__item {
+    grid-column: 1 / -1;
+  }
+
+  .end-10 {
+    grid-column-end: 10;
+  }
+}
 
 @layer sections {
   
+}
+
+@layer components {
+  /* Buttons */
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    flex: 0 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-apple);
+    background-color: var(--color-forest);
+    border: var(--color-forest) 1px solid;
+    padding: 0.75rem 1.25rem;
+    min-width: 7rem;
+    transition: color var(--transition-hover), background-color var(--transition-hover);
+  }
+
+  .button.outlined {
+    color: var(--color-forest);
+    background-color: transparent;
+  }
+
+  .button:hover {
+    background-color: var(--color-moss);
+  }
+
+  .button.outlined:hover {
+    color: var(--color-apple);
+    background-color: var(--color-forest);
+  }
 }

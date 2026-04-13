@@ -1671,6 +1671,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -1684,5 +1689,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1776007439
+    "modified": 1776100153
 }

@@ -11,6 +11,7 @@ class Loader {
     'DisableGutenberg\DisableGutenberg',
     'ACFFields\ACFFields',
     'OptionPage\OptionPage',
+    'ShortCode\ShortCode',
   ];
 
   public function __construct() {

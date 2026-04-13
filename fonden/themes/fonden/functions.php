@@ -99,7 +99,39 @@ add_action( 'wp_head', function() {
       . '</script>';
 } );
 
-// Injects
+// Enqueue
+add_action( 'wp_enqueue_scripts', function() {
+  wp_enqueue_style( 
+    'style', 
+    get_theme_file_uri() . '/style.css',
+    [],
+    wp_get_theme()->get( 'Version' )
+  );
+} );
+
 add_action( 'get_footer', function() {
   wp_enqueue_script( 'index', get_theme_file_uri( 'index.js' ), array(), "1.0", TRUE );
 } );
+
+// Helpers
+function render_acf_img( $img, int $divide_by = 1, string $priority = 'low' ) {
+  $id = is_array( $img ) ? $img['ID'] : $img;
+
+   if ( ! wp_attachment_is_image( $id ) ) return;
+
+  $widths = [
+    'desktop' => 928, // px
+    'handheld'  => 100 // vw
+  ];
+
+  $attrs = [
+    'sizes'   => '(min-width: 928px) ' . $widths['desktop'] / $divide_by . 'px, ' . $widths['handheld'] / $divide_by . 'vw',
+    'loading' => $priority === 'high' ? 'eager' : 'lazy',
+  ];
+
+  if ( $priority === 'high' ) {
+    $attrs['fetchpriority'] = 'high';
+  }
+
+  echo wp_get_attachment_image( $id, 'full', attr: $attrs );
+}

@@ -9,6 +9,7 @@ class Loader {
   protected $modules = [
     'DisableComments\DisableComments',
     'DisableGutenberg\DisableGutenberg',
+    'CustomPostTypes\CustomPostTypes',
     'ACFFields\ACFFields',
     'OptionPage\OptionPage',
     'ShortCode\ShortCode',

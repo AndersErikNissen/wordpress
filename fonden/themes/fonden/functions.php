@@ -114,10 +114,15 @@ add_action( 'get_footer', function() {
 } );
 
 // Helpers
-function render_acf_img( $img, int $divide_by = 1, string $priority = 'low' ) {
+function render_img( $img, array $divisions = [], string $priority = 'low', bool $use_alt = false ) {
   $id = is_array( $img ) ? $img['ID'] : $img;
 
    if ( ! wp_attachment_is_image( $id ) ) return;
+
+  $divide_by = array_merge( [
+    'desktop'  => 1,
+    'handheld' => 1
+  ], $divisions );
 
   $widths = [
     'desktop' => 928, // px
@@ -125,7 +130,7 @@ function render_acf_img( $img, int $divide_by = 1, string $priority = 'low' ) {
   ];
 
   $attrs = [
-    'sizes'   => '(min-width: 928px) ' . $widths['desktop'] / $divide_by . 'px, ' . $widths['handheld'] / $divide_by . 'vw',
+    'sizes'   => '(min-width: 928px) ' . $widths['desktop'] / $divide_by['desktop'] . 'px, ' . $widths['handheld'] / $divide_by['handheld'] . 'vw',
     'loading' => $priority === 'high' ? 'eager' : 'lazy',
   ];
 
@@ -134,4 +139,45 @@ function render_acf_img( $img, int $divide_by = 1, string $priority = 'low' ) {
   }
 
   echo wp_get_attachment_image( $id, 'full', attr: $attrs );
+
+  if ( $img['alt'] && $use_alt ) {
+    printf( '<div class="alt"><p>%s</p></div>', $img['alt'] );
+  }
+}
+
+function render_button( array $link, bool $outlined = false ) { 
+  if ( ! $link['url'] || ! $link['title'] ) return;
+  
+  printf( '<a class="%s" href="%s" target="%s">'
+          . '<span class="button__content">'
+            . '<span class="button__labels">'
+              . '<span class="button__label">%4$s</span><span class="button__label">%4$s</span>'
+            . '</span>'
+          . '</span>'
+        . '</a>',
+    'button' . ( $outlined ? ' outlined' : '' ),
+    esc_url( $link['url'] ),
+    esc_attr( $link['target'] ?: '_self' ),
+    esc_html( $link['title'] )
+  );
+}
+
+function render_icon( string $name = '' ) {
+  $icons = [
+    'arrow-right'     => '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">' .
+                           '<path d="M2 15.5008L28.1074 15.5008L17.1484 4.3515L17.5049 4.00104L17.8623 3.65059L30.001 16.0006L17.8623 28.3506L17.5049 28.0001L17.1484 27.6497L28.1074 16.5004L2 16.5004V15.5008Z" fill="currentColor"/>' .
+                         '</svg>',
+    'arrow-top-right' => '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">' .
+                           '<path d="M5.74722 25.547L24.208 7.08627L8.57506 6.95172L8.5793 6.45186L8.58422 5.95131L25.9003 6.10074L26.0498 23.4169L25.5492 23.4218L25.0494 23.426L24.9148 7.79312L6.45407 26.2539L5.74722 25.547Z" fill="currentColor"/>' .
+                         '</svg>',
+    'chevron'         => '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">' .
+                           '<path d="M28.3506 10.7129L16 22.8486L3.64941 10.7129L4.35059 10L16 21.4463L27.6494 10L28.3506 10.7129Z" fill="currentColor"/>' .
+                         '</svg>'
+  ];
+
+  $icon = $icons[$name] ?? null;
+
+  if ( $icon ) {
+    printf( '<div class="icon">%s</div>', $icon );
+  }
 }

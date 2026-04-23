@@ -1,9 +1,9 @@
 {
-    "key": "group_69c5abb93dc48",
+    "key": "group_69e394355d430",
     "title": "Page",
     "fields": [
         {
-            "key": "field_69c5bf007ca86",
+            "key": "field_69e394355fb40",
             "label": "SEO",
             "name": "",
             "aria-label": "",
@@ -21,7 +21,7 @@
             "selected": 0
         },
         {
-            "key": "field_69caad06ce705",
+            "key": "field_69e394355ff28",
             "label": "Schema",
             "name": "",
             "aria-label": "",
@@ -39,7 +39,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_69c5bf3e7ca87",
+            "key": "field_69e39435606f8",
             "label": "",
             "name": "schema",
             "aria-label": "",
@@ -55,7 +55,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69c5bf4c7ca88",
+                    "key": "field_69e394356e5a0",
                     "label": "Navn",
                     "name": "name",
                     "aria-label": "",
@@ -76,7 +76,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_69c5bf527ca89",
+                    "key": "field_69e394356e988",
                     "label": "Beskrivelse",
                     "name": "description",
                     "aria-label": "",
@@ -97,7 +97,7 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_69c5bf667ca8a",
+                    "key": "field_69e394356ed70",
                     "label": "Side type",
                     "name": "page_type",
                     "aria-label": "",
@@ -126,7 +126,7 @@
             ]
         },
         {
-            "key": "field_69caad10ce706",
+            "key": "field_69e3943560ae0",
             "label": "Schema [end]",
             "name": "",
             "aria-label": "",
@@ -144,7 +144,7 @@
             "endpoint": 1
         },
         {
-            "key": "field_69c5c0657ca8b",
+            "key": "field_69e3943560ec8",
             "label": "Sektioner",
             "name": "",
             "aria-label": "",
@@ -162,7 +162,7 @@
             "selected": 0
         },
         {
-            "key": "field_69c5c9dbca327",
+            "key": "field_69e39435612b0",
             "label": "Introduktion",
             "name": "",
             "aria-label": "",
@@ -180,7 +180,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_69c5c06e7ca8c",
+            "key": "field_69e3943561698",
             "label": "",
             "name": "section_introduction",
             "aria-label": "",
@@ -196,7 +196,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69dbb2d76b65f",
+                    "key": "field_69e394358b290",
                     "label": "Indhold",
                     "name": "",
                     "aria-label": "",
@@ -214,7 +214,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69c5c07d7ca8d",
+                    "key": "field_69e394358b678",
                     "label": "Titel",
                     "name": "title",
                     "aria-label": "",
@@ -235,11 +235,11 @@
                     "append": ""
                 },
                 {
-                    "key": "field_69c5c0b97ca8e",
-                    "label": "Beskrivelse",
-                    "name": "description",
+                    "key": "field_69e7d6bfac58b",
+                    "label": "Informationskasse",
+                    "name": "info_box",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -249,14 +249,14 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "tabs": "visual",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
                 },
                 {
-                    "key": "field_69dbb2e06b660",
+                    "key": "field_69e394358ba60",
                     "label": "Knapper",
                     "name": "",
                     "aria-label": "",
@@ -274,7 +274,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69dbb2f16b661",
+                    "key": "field_69e394358be48",
                     "label": "",
                     "name": "buttons",
                     "aria-label": "",
@@ -290,7 +290,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_69dbb3136b662",
+                            "key": "field_69e3943599138",
                             "label": "Knap (1)",
                             "name": "button_1",
                             "aria-label": "",
@@ -307,7 +307,7 @@
                             "allow_in_bindings": 0
                         },
                         {
-                            "key": "field_69dbb34b6b663",
+                            "key": "field_69e3943599520",
                             "label": "Knap (2)",
                             "name": "button_2",
                             "aria-label": "",
@@ -326,7 +326,7 @@
                     ]
                 },
                 {
-                    "key": "field_69dbb284979da",
+                    "key": "field_69e394358c230",
                     "label": "Billede",
                     "name": "",
                     "aria-label": "",
@@ -344,7 +344,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69c5c1217ca8f",
+                    "key": "field_69e394358ca00",
                     "label": "Vælg billede",
                     "name": "image",
                     "aria-label": "",
@@ -372,8 +372,8 @@
             ]
         },
         {
-            "key": "field_69c5c9b10bdc6",
-            "label": "Kolonne",
+            "key": "field_69e7124746ab6",
+            "label": "Tekst",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -390,9 +390,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_69c5c96ad5f93",
+            "key": "field_69e711c746ab3",
             "label": "",
-            "name": "section_column",
+            "name": "section_text",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -406,7 +406,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69c5c97bd5f94",
+                    "key": "field_69e7121e46ab5",
                     "label": "Indhold",
                     "name": "content",
                     "aria-label": "",
@@ -429,8 +429,8 @@
             ]
         },
         {
-            "key": "field_69c5ccba37511",
-            "label": "Tekst og billede",
+            "key": "field_69e8632e0d151",
+            "label": "Kort",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -447,9 +447,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_69c5ccb53750a",
+            "key": "field_69e863230d14f",
             "label": "",
-            "name": "section_text_and_image_1",
+            "name": "section_cards",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -463,7 +463,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69c6758b9bcb0",
+                    "key": "field_69e863480d153",
                     "label": "Indhold",
                     "name": "",
                     "aria-label": "",
@@ -481,8 +481,8 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69c5ccb63750b",
-                    "label": "Titel",
+                    "key": "field_69e8633e0d152",
+                    "label": "Overskrift",
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
@@ -502,46 +502,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_69c5ccb63750c",
-                    "label": "Beskrivelse",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_69c674d81d71b",
-                    "label": "Knap",
-                    "name": "button",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "allow_in_bindings": 0
-                },
-                {
-                    "key": "field_69c6759a9bcb1",
-                    "label": "Billede",
+                    "key": "field_69e863510d154",
+                    "label": "Kort elementer",
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
@@ -558,270 +520,9 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69c5ccb63750d",
-                    "label": "Billede",
-                    "name": "image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "",
-                    "library": "",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium"
-                },
-                {
-                    "key": "field_69c5ccb63750e",
-                    "label": "Billedeformat",
-                    "name": "aspect_ratio",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_69c5ccb63750f",
-                            "label": "Computer",
-                            "name": "desktop",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "original": "Original",
-                                "square": "Kvadrat (1:1)",
-                                "banner": "Banner (3:1)",
-                                "wide": "Bred (3:2)",
-                                "landscape": "Landskab (16:9)",
-                                "portrait": "Portræt (9:16)"
-                            },
-                            "default_value": "original",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "horizontal",
-                            "save_other_choice": 0
-                        },
-                        {
-                            "key": "field_69c5ccb637510",
-                            "label": "Mobil og tablet",
-                            "name": "handheld",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "original": "Original",
-                                "square": "Kvadrat (1:1)",
-                                "banner": "Banner (3:1)",
-                                "wide": "Bred (3:2)",
-                                "landscape": "Landskab (16:9)",
-                                "portrait": "Portræt (9:16)"
-                            },
-                            "default_value": "original",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "horizontal",
-                            "save_other_choice": 0
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "key": "field_69c5d18437512",
-            "label": "Tekst og billede",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_69c675da3b09a",
-            "label": "",
-            "name": "section_text_and_image_2",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_69c675da3b09b",
-                    "label": "Indhold",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_69c675da3b09c",
-                    "label": "Titel",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_69c675da3b09d",
-                    "label": "Beskrivelse",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_69c675da3b09e",
-                    "label": "Knap",
-                    "name": "button",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "allow_in_bindings": 0
-                },
-                {
-                    "key": "field_69c675da3b09f",
-                    "label": "Billede",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_69c675da3b0a0",
-                    "label": "Billede",
-                    "name": "image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium"
-                },
-                {
-                    "key": "field_69c675da3b0a1",
-                    "label": "Billedeformat",
-                    "name": "aspect_ratio",
+                    "key": "field_69e8635e0d155",
+                    "label": "",
+                    "name": "items",
                     "aria-label": "",
                     "type": "group",
                     "instructions": "",
@@ -835,11 +536,11 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_69c675da3b0a2",
-                            "label": "Computer",
-                            "name": "desktop",
+                            "key": "field_69e8636d0d156",
+                            "label": "Element (1)",
+                            "name": "item_1",
                             "aria-label": "",
-                            "type": "radio",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -848,28 +549,58 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "original": "Original",
-                                "square": "Kvadrat (1:1)",
-                                "banner": "Banner (3:1)",
-                                "wide": "Bred (3:2)",
-                                "landscape": "Landskab (16:9)",
-                                "portrait": "Portræt (9:16)"
-                            },
-                            "default_value": "original",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "horizontal",
-                            "save_other_choice": 0
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e863920d157",
+                                    "label": "Overskrift",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e8639b0d158",
+                                    "label": "Tekst",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
                         },
                         {
-                            "key": "field_69c675da3b0a3",
-                            "label": "Mobil og tablet",
-                            "name": "handheld",
+                            "key": "field_69e863b10d159",
+                            "label": "Element (2)",
+                            "name": "item_2",
                             "aria-label": "",
-                            "type": "radio",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -878,29 +609,119 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "original": "Original",
-                                "square": "Kvadrat (1:1)",
-                                "banner": "Banner (3:1)",
-                                "wide": "Bred (3:2)",
-                                "landscape": "Landskab (16:9)",
-                                "portrait": "Portræt (9:16)"
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e863b10d15a",
+                                    "label": "Overskrift",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e863b10d15b",
+                                    "label": "Tekst",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_69e863b40d15c",
+                            "label": "Element (3)",
+                            "name": "item_3",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
                             },
-                            "default_value": "original",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "horizontal",
-                            "save_other_choice": 0
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e863b40d15d",
+                                    "label": "Overskrift",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e863b40d15e",
+                                    "label": "Tekst",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "key": "field_69c5d224cb637",
-            "label": "Galleri",
+            "key": "field_69e93a21e299c",
+            "label": "Formular",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -917,9 +738,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_69c67118b92ef",
+            "key": "field_69e93a15e298e",
             "label": "",
-            "name": "section_gallery",
+            "name": "section_form",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -933,217 +754,30 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69c6712bb92f0",
-                    "label": "Billede (1)",
-                    "name": "image_1",
+                    "key": "field_69e93a3be299d",
+                    "label": "Shortcode",
+                    "name": "shortcode",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
+                    "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c6726fb92f3",
-                    "label": "Billede (2)",
-                    "name": "image_2",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c67271b92f4",
-                    "label": "Billede (3)",
-                    "name": "image_3",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c6727bb92f5",
-                    "label": "Billede (4)",
-                    "name": "image_4",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c6727cb92f6",
-                    "label": "Billede (5)",
-                    "name": "image_5",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c67284b92f7",
-                    "label": "Billede (6)",
-                    "name": "image_6",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c6728db92f8",
-                    "label": "Billede (7)",
-                    "name": "image_7",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69c67290b92f9",
-                    "label": "Billede (8)",
-                    "name": "image_8",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
         {
-            "key": "field_69c5d236cb638",
+            "key": "field_69e3943562638",
             "label": "Ofte stillede spørgsmål",
             "name": "",
             "aria-label": "",
@@ -1161,7 +795,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_69caa5aeb0766",
+            "key": "field_69e3943562a20",
             "label": "",
             "name": "section_faq",
             "aria-label": "",
@@ -1177,8 +811,8 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69caa5d2b0767",
-                    "label": "Spørgsmål og svar (1)",
+                    "key": "field_69e66f40e91dd",
+                    "label": "Indhold",
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
@@ -1195,11 +829,11 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69caa611b0768",
-                    "label": "",
-                    "name": "item_1",
+                    "key": "field_69e66fd1e91e0",
+                    "label": "Overskrift",
+                    "name": "title",
                     "aria-label": "",
-                    "type": "group",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1208,55 +842,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69caa65bb0769",
-                            "label": "Spørgsmål",
-                            "name": "question",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_69caa665b076a",
-                            "label": "Svar",
-                            "name": "answer",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ]
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 },
                 {
-                    "key": "field_69caa716b076b",
-                    "label": "Spørgsmål og svar (2)",
+                    "key": "field_69e66fc4e91df",
+                    "label": "Spørgsmål og svar",
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
@@ -1273,9 +868,9 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_69caa71fb076c",
+                    "key": "field_69e66f35e91dc",
                     "label": "",
-                    "name": "item_2",
+                    "name": "items",
                     "aria-label": "",
                     "type": "group",
                     "instructions": "",
@@ -1289,11 +884,11 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_69caa71fb076d",
-                            "label": "Spørgsmål",
-                            "name": "question",
+                            "key": "field_69e394360bf68",
+                            "label": "Spørgsmål og svar (1)",
+                            "name": "",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "accordion",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1302,19 +897,16 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
                         },
                         {
-                            "key": "field_69caa71fb076e",
-                            "label": "Svar",
-                            "name": "answer",
+                            "key": "field_69e394360c350",
+                            "label": "",
+                            "name": "item_1",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1323,76 +915,58 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_69caa726b076f",
-                    "label": "Spørgsmål og svar (3)",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_69caa72bb0770",
-                    "label": "",
-                    "name": "item_3",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69caa72bb0771",
-                            "label": "Spørgsmål",
-                            "name": "question",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e39436153d8",
+                                    "label": "Spørgsmål",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e39436157c0",
+                                    "label": "Svar",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
                         },
                         {
-                            "key": "field_69caa72bb0772",
-                            "label": "Svar",
-                            "name": "answer",
+                            "key": "field_69e394360c738",
+                            "label": "Spørgsmål og svar (2)",
+                            "name": "",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "accordion",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1401,76 +975,16 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_69caa72fb0773",
-                    "label": "Spørgsmål og svar (4)",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_69caa734b0774",
-                    "label": "",
-                    "name": "item_4",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69caa734b0775",
-                            "label": "Spørgsmål",
-                            "name": "question",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
                         },
                         {
-                            "key": "field_69caa734b0776",
-                            "label": "Svar",
-                            "name": "answer",
+                            "key": "field_69e394360cb20",
+                            "label": "",
+                            "name": "item_2",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1479,76 +993,58 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_69caa739b0777",
-                    "label": "Spørgsmål og svar (5)",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_69caa73db0778",
-                    "label": "",
-                    "name": "item_5",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69caa73db0779",
-                            "label": "Spørgsmål",
-                            "name": "question",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e3943623e38",
+                                    "label": "Spørgsmål",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e3943624608",
+                                    "label": "Svar",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
                         },
                         {
-                            "key": "field_69caa73db077a",
-                            "label": "Svar",
-                            "name": "answer",
+                            "key": "field_69e394360cf08",
+                            "label": "Spørgsmål og svar (3)",
+                            "name": "",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "accordion",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1557,76 +1053,16 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_69caa741b077b",
-                    "label": "Spørgsmål og svar (6)",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_69caa745b077c",
-                    "label": "",
-                    "name": "item_6",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69caa745b077d",
-                            "label": "Spørgsmål",
-                            "name": "question",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
                         },
                         {
-                            "key": "field_69caa745b077e",
-                            "label": "Svar",
-                            "name": "answer",
+                            "key": "field_69e394360d2f0",
+                            "label": "",
+                            "name": "item_3",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1635,20 +1071,377 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e3943632c80",
+                                    "label": "Spørgsmål",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e3943633068",
+                                    "label": "Svar",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_69e394360dac0",
+                            "label": "Spørgsmål og svar (4)",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_69e394360dea8",
+                            "label": "",
+                            "name": "item_4",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e39436416e0",
+                                    "label": "Spørgsmål",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e3943641eb0",
+                                    "label": "Svar",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_69e394360e290",
+                            "label": "Spørgsmål og svar (5)",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_69e394360e678",
+                            "label": "",
+                            "name": "item_5",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e3943650140",
+                                    "label": "Spørgsmål",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e3943650528",
+                                    "label": "Svar",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_69e394360ea60",
+                            "label": "Spørgsmål og svar (6)",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_69e394360ee48",
+                            "label": "",
+                            "name": "item_6",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_69e394365ef88",
+                                    "label": "Spørgsmål",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_69e394365f370",
+                                    "label": "Svar",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "key": "field_69caabc7ef390",
-            "label": "Ofte stillede spørgsmål [end]",
+            "key": "field_69e395e5879c9",
+            "label": "Personer",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_69e39601879ca",
+            "label": "",
+            "name": "section_people",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_69e3960e879cb",
+                    "label": "Overskrift",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_69e39628879cc",
+                    "label": "Personer",
+                    "name": "people",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "person"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 1,
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": []
+                }
+            ]
+        },
+        {
+            "key": "field_69e39435635d8",
+            "label": "Sektioner [end]",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -1676,11 +1469,6 @@
                 "param": "page_type",
                 "operator": "!=",
                 "value": "front_page"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "429"
             }
         ]
     ],
@@ -1696,5 +1484,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1776523021
+    "modified": 1776973622
 }

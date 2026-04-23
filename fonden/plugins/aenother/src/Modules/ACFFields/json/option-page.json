@@ -120,6 +120,27 @@
                     "step": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_69ea792c4883e",
+                    "label": "Kort beskrivelse af fonden",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
                 }
             ]
         },
@@ -328,8 +349,8 @@
             "sub_fields": [
                 {
                     "key": "field_69ced9683cd09",
-                    "label": "Telefon",
-                    "name": "phone",
+                    "label": "Telefonnummer",
+                    "name": "phone_number",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -665,5 +686,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1776026555
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1776974734
 }

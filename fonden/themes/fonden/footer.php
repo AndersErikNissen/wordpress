@@ -1,7 +1,60 @@
+<?php 
+  $company     = get_field( 'company', 'option' );
+  $contact     = get_field( 'contact', 'option' );
+  
+  $description  = $company['description']  ?? null;
+  $email        = $contact['email']        ?? null;
+  $phone_number = $contact['phone_number'] ?? null;
+?>    
     </main>
     
     <footer class="footer">
       <div class="grid pw">
+        <div class="grid__item footer__main">
+          <?php if ( $description ) { ?>
+            <div class="footer__description">
+              <p class="h4 mb-1">Fonden</p>
+              <p><?php echo $description; ?></p>
+            </div>
+          <?php } ?>
+          
+          <div class="footer__information"> 
+            <div class="footer__contact"> 
+              <p class="h4 mb-1">Kontakt</p>
+
+              <?php if ( $email || $phone_number ) { ?>
+                <ul class="footer__links">
+                  <?php if ( $email ) { ?>
+                    <li>
+                      <a class="link" href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+                    </li>
+                  <?php } ?>
+                  
+                  <?php if ( $phone_number ) { ?>
+                    <li>
+                      <a class="link" href="tel:<?php echo esc_attr( str_replace( ' ', '', $phone_number ) ); ?>"><?php echo esc_html( $phone_number ); ?></a>
+                    </li>
+                  <?php } ?>
+                </ul>
+              <?php } ?>
+            </div>
+
+            <div class="footer__navigation">
+              <p class="h4 mb-1">Navigation</p>
+
+              <?php wp_nav_menu( [
+                'menu'       => 'footer',
+                'menu_class' => 'footer__links',
+                'container'  => 'ul'
+              ] ); ?>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid__item footer__dev">
+          <p>Designet og udviklet af <a class="link" href="https://aenders.dk" target="_blank">aenders.dk</a></p>
+        </div>
+
         <div class="grid__item footer__logo">
           <svg width="928" height="127" viewBox="0 0 928 127" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M879.66 125.968C863.774 125.968 851.065 122.45 841.533 115.415C832.001 108.266 826.441 98.2237 824.852 85.2877H850.044C850.838 91.8691 854.015 97.0889 859.575 100.947C865.136 104.692 872.228 106.564 880.852 106.564C887.887 106.564 893.277 105.316 897.022 102.819C900.88 100.323 902.809 96.9755 902.809 92.7769C902.809 88.8054 901.674 85.6281 899.405 83.2451C897.135 80.7487 893.22 78.7629 887.66 77.2878L864.852 70.99C853.164 67.6992 844.597 63.217 839.15 57.5434C833.817 51.7562 831.15 44.5506 831.15 35.9266C831.15 28.5508 833.023 22.1963 836.767 16.863C840.625 11.4163 846.015 7.27453 852.937 4.43768C859.859 1.48737 867.972 0.0122147 877.277 0.0122147C891.575 0.0122147 902.979 3.41642 911.49 10.2248C920 16.9198 924.823 25.8275 925.957 36.9479H900.766C899.632 30.9338 896.851 26.5083 892.426 23.6715C888.114 20.8346 882.554 19.4162 875.745 19.4162C869.845 19.4162 865.136 20.5509 861.618 22.8204C858.1 25.0899 856.341 28.1537 856.341 32.0118C856.341 34.9621 857.306 37.6855 859.235 40.1819C861.164 42.5648 865.192 44.6074 871.32 46.3095L894.128 52.6072C906.156 55.898 914.78 60.4369 920 66.2241C925.333 71.8978 928 79.1033 928 87.8408C928 100.096 923.745 109.514 915.234 116.096C906.724 122.677 894.866 125.968 879.66 125.968Z" fill="currentColor"/>

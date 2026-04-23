@@ -3,15 +3,20 @@ $data = get_field( 'section_introduction' );
 
 if ( empty( $data ) ) return;
 
-$title   = $data['title']                   ?? null;
-$buttons = array_filter( $data['buttons'] ) ?: null; 
-$image   = is_array( $data['image'] )       ? $data['image'] : null; ?>
+$title    = $data['title']                   ?? null;
+$buttons  = array_filter( $data['buttons'] ) ?: null; 
+$image    = is_array( $data['image'] )       ? $data['image'] : null;
+$info_box = $data['info_box']                ?? null; 
+if ( ! $title ) return; ?>
 
 <section class="introduction section">
   <div class="grid pw">
-    <div class="grid__item tablet:end-10">
+    <div class="grid__item laptop:end-<?php echo $info_box ? '7' : '12'; ?>">
       <?php if ( $title ) {
-        printf( '<h1 class="h1">%s</h1>', esc_html( $title ) );
+        printf( '<h1 class="%s">%s</h1>',
+          $info_box ? 'h2' : 'h1', 
+          esc_html( $title ) 
+        );
       } ?>
 
       <?php if ( $buttons ) { ?>
@@ -24,6 +29,12 @@ $image   = is_array( $data['image'] )       ? $data['image'] : null; ?>
         </ul>
       <?php } ?>
     </div>
+
+    <?php if ( $info_box ) { ?>
+      <div class="introduction__info-box grid__item rte laptop:start-8">
+        <?php echo $info_box; ?>
+      </div>
+    <?php } ?>
 
     <?php if ( $image ) { ?>
       <div class="grid__item mt-6">

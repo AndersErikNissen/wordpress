@@ -9,3 +9,9 @@ uploads/
 */db.php
 */debug.log
 .DS_Store
+
+# Example themes
+/*/themes/twenty*/
+
+# Example plugin
+/*/plugins/hello.php

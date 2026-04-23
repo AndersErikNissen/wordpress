@@ -13,16 +13,16 @@ $title = $data['title'] ?? null; ?>
 
 <section id="faq" class="faq section">
   <div class="grid pw">
-    <div class="grid__item tablet:start-2 tablet:end-12">
+    <div class="grid__item">
       <?php if ( $title ) { ?>
-        <h2 class="h1 mb-2"><?php echo $title; ?></h2>
+        <h2 class="h2 mb-2"><?php echo $title; ?></h2>
       <?php } ?>
 
       <ul class="accordion-collection">
         <?php foreach ( array_values( $items ) as $index => $item ) { ?>
           <li class="accordion">
             <div class="accordion__header">
-              <p class="l2"><?php echo $item['question']; ?></p>
+              <p class="l2"><?php echo esc_html( $item['question'] ); ?></p>
               <?php render_icon( 'chevron' ); ?>
             </div>
 

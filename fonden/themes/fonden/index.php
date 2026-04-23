@@ -12,18 +12,12 @@ if ( have_posts() ) {
       get_template_part( 'sections/cta' );
 
     } elseif ( is_page() ) {
-      $slug = get_post_field( 'post_name', get_queried_object_id() );
+      get_template_part( 'sections/text' );
+      get_template_part( 'sections/cards' );
+      get_template_part( 'sections/form' );
+      get_template_part( 'sections/faq' );
+      get_template_part( 'sections/people' );
 
-      switch( $slug ) {
-        case 'kontakt':  
-        case 'kontakt-os':
-          get_template_part( 'sections/people' );
-          get_template_part( 'sections/faq' );
-          break;
-
-        default:
-      }
-      
     } elseif ( is_page() ) {
 
     } else {

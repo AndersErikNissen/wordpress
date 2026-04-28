@@ -4,10 +4,8 @@ $shortcode = $data['shortcode'] ?? '';
 
 if ( ! class_exists( 'Forminator' ) || empty( $data ) || empty( $shortcode ) ) return; ?>
 
-<section class="form section">
-  <div class="grid pw">
-    <div class="grid__item">
-      <?php echo apply_shortcodes( $shortcode ); ?>
-    </div>
+<section id="form" class="form">
+  <div class="form__main">
+    <?php echo apply_shortcodes( $shortcode ); ?>
   </div>
 </section>

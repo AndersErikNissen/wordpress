@@ -26,13 +26,13 @@
                 <ul class="footer__links">
                   <?php if ( $email ) { ?>
                     <li>
-                      <a class="link" href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+                      <a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
                     </li>
                   <?php } ?>
                   
                   <?php if ( $phone_number ) { ?>
                     <li>
-                      <a class="link" href="tel:<?php echo esc_attr( str_replace( ' ', '', $phone_number ) ); ?>"><?php echo esc_html( $phone_number ); ?></a>
+                      <a href="tel:<?php echo esc_attr( str_replace( ' ', '', $phone_number ) ); ?>"><?php echo esc_html( $phone_number ); ?></a>
                     </li>
                   <?php } ?>
                 </ul>

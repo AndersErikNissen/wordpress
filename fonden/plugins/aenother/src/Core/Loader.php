@@ -13,6 +13,7 @@ class Loader {
     'ACFFields\ACFFields',
     'OptionPage\OptionPage',
     'ShortCode\ShortCode',
+    'ForminatorUpgrade\ForminatorUpgrade',
   ];
 
   public function __construct() {

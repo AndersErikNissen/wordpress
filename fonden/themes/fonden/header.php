@@ -1,3 +1,8 @@
+<?php 
+$mobile_menu     = get_field( 'mobile_menu', 'option' );
+$mobile_menu_cta = $mobile_menu['cta'] ?? null;
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
@@ -11,7 +16,7 @@
     <?php wp_body_open(); ?>
 
     <header class="header">
-      <div class="">
+      <div class="header__main pw">
         <div class="header__logo">
           <svg width="88" height="77" viewBox="0 0 88 77" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M77.9307 29.6084C80.6186 29.6084 82.7623 30.2483 84.3623 31.5283C85.9623 32.787 86.8696 34.4612 87.083 36.5518H82.3467C82.1333 35.4212 81.6103 34.589 80.7783 34.0557C79.9677 33.5225 78.9224 33.2559 77.6426 33.2559C76.5333 33.2559 75.6477 33.4689 74.9863 33.8955C74.325 34.3222 73.9941 34.8987 73.9941 35.624C73.9942 36.1787 74.1764 36.6908 74.5391 37.1602C74.9018 37.608 75.6589 37.9916 76.8105 38.3115L81.0986 39.4961C83.3599 40.1148 84.9816 40.9677 85.9629 42.0557C86.9656 43.1223 87.4668 44.4775 87.4668 46.1201C87.4668 48.424 86.6663 50.1943 85.0664 51.4316C83.4665 52.6689 81.2374 53.288 78.3789 53.2881C75.3923 53.2881 73.0029 52.6263 71.2109 51.3037C69.4189 49.9597 68.3729 48.0716 68.0742 45.6396H72.8105C72.9599 46.877 73.5572 47.8587 74.6025 48.584C75.6479 49.288 76.9812 49.6396 78.6025 49.6396C79.9252 49.6396 80.9386 49.4049 81.6426 48.9355C82.3678 48.4662 82.7305 47.8371 82.7305 47.0479C82.7304 46.3013 82.5174 45.7038 82.0908 45.2559C81.6642 44.7865 80.9281 44.4131 79.8828 44.1357L75.5947 42.9521C73.3974 42.3335 71.7867 41.4905 70.7627 40.4238C69.7601 39.3359 69.2589 37.9815 69.2588 36.3604C69.2588 34.9738 69.6106 33.779 70.3145 32.7764C71.0397 31.7524 72.0533 30.9738 73.3545 30.4404C74.6558 29.8858 76.1813 29.6084 77.9307 29.6084Z" fill="currentColor"/>
@@ -30,16 +35,18 @@
             <path d="M19.0961 77C18.009 77 17.0088 76.8054 16.0957 76.4162C15.197 76.0126 14.4142 75.4504 13.7475 74.7297C13.0807 73.9946 12.5589 73.1369 12.182 72.1568C11.8196 71.1766 11.6385 70.1027 11.6385 68.9351C11.6385 67.3928 11.9574 66.0234 12.5951 64.827C13.2329 63.6306 14.1098 62.6937 15.226 62.0162C16.3566 61.3387 17.6394 61 19.0744 61C20.5383 61 21.8284 61.3387 22.9445 62.0162C24.0751 62.6937 24.9593 63.6306 25.5971 64.827C26.2348 66.0234 26.5537 67.4 26.5537 68.9568C26.5537 70.1243 26.3653 71.1982 25.9884 72.1784C25.6261 73.1586 25.1115 74.009 24.4447 74.7297C23.778 75.4504 22.988 76.0126 22.0748 76.4162C21.1616 76.8054 20.1687 77 19.0961 77ZM19.0744 75.4C20.1905 75.4 21.1689 75.1261 22.0096 74.5784C22.8648 74.0162 23.5315 73.245 24.0099 72.2649C24.4882 71.2847 24.7274 70.1676 24.7274 68.9135C24.7274 67.6739 24.4882 66.5784 24.0099 65.627C23.546 64.6757 22.8865 63.9333 22.0313 63.4C21.1906 62.8667 20.205 62.6 19.0744 62.6C17.9438 62.6 16.9581 62.8667 16.1174 63.4C15.2767 63.9333 14.6244 64.6757 14.1606 65.627C13.6967 66.564 13.4648 67.6595 13.4648 68.9135C13.4648 70.182 13.6967 71.3063 14.1606 72.2865C14.6389 73.2522 15.2984 74.0162 16.1391 74.5784C16.9798 75.1261 17.9582 75.4 19.0744 75.4Z" fill="currentColor"/>
             <path d="M0 76.7838V61.2162H1.78287V76.7838H0ZM0.91318 70.1027V68.546H9.34922V70.1027H0.91318ZM0.91318 62.773V61.2162H9.95801V62.773H0.91318Z" fill="currentColor"/>
           </svg>
+
+          <a href="<?php echo home_url(); ?>"></a>
         </div>
 
-        <div class="header__navigation">
+        <nav class="header__navigation">
           <?php wp_nav_menu( [
             'menu'       => 'header',
-            'menu_class' => 'header__links',
+            'menu_class' => 'header__links handheld:hidden',
             'container'  => 'ul'
           ] ); ?>
 
-          <button class="button" data-modal="apply">
+          <button class="button handheld:hidden" data-modal-btn="apply">
             <span class="button__content">
               <span class="button__labels">
                 <span class="button__label">Søg bevilling</span>
@@ -47,9 +54,104 @@
               </span>
             </span>
           </button>
-        </div>
+
+          <button class="button laptop:hidden" data-modal-btn="menu">
+            <span class="button__content">
+              <span class="button__labels">
+                <span class="button__label">Menu</span>
+                <span class="button__label">Menu</span>
+              </span>
+            </span>
+          </button>
+        </nav>
       </div>
     </header>
+
+    <div class="modal menu hidden">
+      <div class="modal__main">
+        <div class="modal__header">
+          <button data-modal-btn="menu">
+            <?php render_icon( 'close' ); ?>
+          </button>
+        </div>
+
+        <nav class="modal__navigation">
+          <p class="l3 mb-05">Navigation</p>
+
+          <?php wp_nav_menu( [
+            'menu'       => 'header',
+            'menu_class' => 'modal__links h3',
+            'container'  => 'ul'
+          ] ); ?> 
+
+          <p class="l3 mb-05 mt-4">Information</p>
+          <?php wp_nav_menu( [
+            'menu'       => 'menu',
+            'menu_class' => 'modal__links h3',
+            'container'  => 'ul'
+          ] ); ?> 
+
+          <p class="l3 mb-05 mt-4">Står du med spørgsmål?</p>
+          <?php wp_nav_menu( [
+            'menu'       => 'contact',
+            'menu_class' => 'modal__links h3',
+            'container'  => 'ul'
+          ] ); ?> 
+        </nav>
+
+        <?php if ( $mobile_menu_cta ) { ?>
+          <a class="cta__button" href="<?php echo $mobile_menu_cta['url']; ?>" target="_self">
+            <span class="button__content">
+              <span class="button__labels l2">
+                <span class="button__label"><?php echo $mobile_menu_cta['title']; ?></span>
+                <span class="button__label"><?php echo $mobile_menu_cta['title']; ?></span>
+              </span>
+            </span>
+
+            <?php render_icon( 'arrow-right' ); ?>
+          </a>
+        <?php } ?> 
+      </div>
+    </div>
+
+    <div class="modal apply hidden">
+      <div class="modal__main">
+        <div class="modal__header">
+          <button data-modal-btn="apply">
+            <?php render_icon( 'close' ); ?>
+          </button>
+        </div>
+
+        <nav class="modal__navigation">
+          <p class="l3 mb-05">Information</p>
+          <?php wp_nav_menu( [
+            'menu'       => 'menu',
+            'menu_class' => 'modal__links h3',
+            'container'  => 'ul'
+          ] ); ?> 
+
+          <p class="l3 mb-05 mt-4">Står du med spørgsmål?</p>
+          <?php wp_nav_menu( [
+            'menu'       => 'contact',
+            'menu_class' => 'modal__links h3',
+            'container'  => 'ul'
+          ] ); ?> 
+        </nav>
+
+        <?php if ( $mobile_menu_cta ) { ?>
+          <a class="cta__button" href="<?php echo $mobile_menu_cta['url']; ?>" target="_self">
+            <span class="button__content">
+              <span class="button__labels l2">
+                <span class="button__label"><?php echo $mobile_menu_cta['title']; ?></span>
+                <span class="button__label"><?php echo $mobile_menu_cta['title']; ?></span>
+              </span>
+            </span>
+
+            <?php render_icon( 'arrow-right' ); ?>
+          </a>
+        <?php } ?> 
+      </div>
+    </div>
 
     <main>
 

@@ -110,7 +110,7 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_action( 'get_footer', function() {
-  wp_enqueue_script( 'index', get_theme_file_uri( 'index.js' ), array(), "1.0", TRUE );
+  wp_enqueue_script( 'index', get_theme_file_uri( 'index.js' ), [], "1.0", TRUE );
 } );
 
 // Helpers
@@ -172,7 +172,10 @@ function render_icon( string $name = '' ) {
                          '</svg>',
     'chevron'         => '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">' .
                            '<path d="M28.3506 10.7129L16 22.8486L3.64941 10.7129L4.35059 10L16 21.4463L27.6494 10L28.3506 10.7129Z" fill="currentColor"/>' .
-                         '</svg>'
+                         '</svg>',
+    'close'           => '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">' .
+                           '<path d="M26 6L16 16M6 26L16 16M16 16L6 6M16 16L26 26" stroke="currentColor"/>' .
+                         '</svg>',
   ];
 
   $icon = $icons[$name] ?? null;

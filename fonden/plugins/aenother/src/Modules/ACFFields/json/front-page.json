@@ -458,7 +458,7 @@
                             "allow_in_bindings": 0,
                             "rows": "",
                             "placeholder": "",
-                            "new_lines": ""
+                            "new_lines": "wpautop"
                         }
                     ]
                 },
@@ -536,7 +536,7 @@
                             "allow_in_bindings": 0,
                             "rows": "",
                             "placeholder": "",
-                            "new_lines": ""
+                            "new_lines": "wpautop"
                         }
                     ]
                 },
@@ -614,7 +614,7 @@
                             "allow_in_bindings": 0,
                             "rows": "",
                             "placeholder": "",
-                            "new_lines": ""
+                            "new_lines": "wpautop"
                         }
                     ]
                 },
@@ -692,7 +692,7 @@
                             "allow_in_bindings": 0,
                             "rows": "",
                             "placeholder": "",
-                            "new_lines": ""
+                            "new_lines": "wpautop"
                         }
                     ]
                 },
@@ -856,5 +856,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1776522481
+    "modified": 1777838629
 }

@@ -11,7 +11,7 @@ if ( empty( $items ) ) return;
 
 $title = $data['title'] ?? null; ?>
 
-<section id="faq" class="faq section">
+<section id="faq" class="faq section" itemscope itemtype="https://schema.org/FAQPage">
   <div class="grid pw">
     <div class="grid__item">
       <?php if ( $title ) { ?>
@@ -20,15 +20,17 @@ $title = $data['title'] ?? null; ?>
 
       <ul class="accordion-collection">
         <?php foreach ( array_values( $items ) as $index => $item ) { ?>
-          <li class="accordion">
+          <li class="accordion" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <div class="accordion__header">
-              <p class="l2"><?php echo esc_html( $item['question'] ); ?></p>
+              <p class="l2" itemprop="name">
+                <?php echo esc_html( $item['question'] ); ?>
+              </p>
               <?php render_icon( 'chevron' ); ?>
             </div>
 
-            <div class="accordion__drawer">
+            <div class="accordion__drawer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
               <div class="accordion__content">
-                <div class="rte p1">
+                <div class="rte p1" itemprop="text">
                   <?php echo $item['answer']; ?>
                 </div>
               </div>

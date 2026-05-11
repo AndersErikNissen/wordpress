@@ -52,7 +52,7 @@
         </div>
 
         <div class="grid__item footer__dev">
-          <p>Designet og udviklet af <a class="link" href="https://aenders.dk" target="_blank">aenders.dk</a></p>
+          <a href="https://aenders.dk" target="_blank">Udviklet af aenders</a>
         </div>
 
         <div class="grid__item footer__logo">

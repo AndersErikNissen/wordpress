@@ -67,26 +67,27 @@ add_action( 'wp_head', function() {
   }
 
   // Page schema
-  $slug = get_post_field( 'post_name', get_queried_object_id() );
-
-  $page_type = match( $slug ) {
-    'om-fonden',  'om-os'   => 'AboutPage',
-    'kontakt-os', 'kontakt' => 'ContactPage',
-    default                 => 'WebPage',
-  };
+  $page_schema      = get_field( 'schema' );
+  $page_type        = $page_schema['page_type']   ?? 'WebPage';
+  $page_name        = $page_schema['name']        ?? get_the_title( get_queried_object_id() );
+  $page_description = $page_schema['description'] ?? null;
 
   $canonical = is_front_page() ? home_url( '/' ) : get_permalink( get_queried_object_id() );
 
   $page = [
-    '@type'       => is_front_page() ? 'WebPage' : $page_type,
+    '@type'       => $page_type,
     '@id'         => $canonical . '#webpage',
     'url'         => $canonical,
-    'name'        => get_the_title( get_queried_object_id() ) . ' — ' . get_bloginfo( 'name' ),
+    'name'        => $page_name . ' — ' . get_bloginfo( 'name' ),
     'isPartOf'    => [ '@id' => home_url( '/#website' ) ],
     'about'       => [ '@id' => home_url( '/#organization' ) ],
     'publisher'   => [ '@id' => home_url( '/#organization' ) ],
     'inLanguage'  => 'da',
   ];
+
+  if ( $page_description ) {
+    $page['description'] = $page_description;
+  }
 
   // Output the schema
   $graph = [
@@ -125,12 +126,12 @@ function render_img( $img, array $divisions = [], string $priority = 'low', bool
   ], $divisions );
 
   $widths = [
-    'desktop' => 928, // px
+    'desktop' => 1024, // px
     'handheld'  => 100 // vw
   ];
 
   $attrs = [
-    'sizes'   => '(min-width: 928px) ' . $widths['desktop'] / $divide_by['desktop'] . 'px, ' . $widths['handheld'] / $divide_by['handheld'] . 'vw',
+    'sizes'   => '(min-width: 1024px) ' . $widths['desktop'] / $divide_by['desktop'] . 'px, ' . $widths['handheld'] / $divide_by['handheld'] . 'vw',
     'loading' => $priority === 'high' ? 'eager' : 'lazy',
   ];
 

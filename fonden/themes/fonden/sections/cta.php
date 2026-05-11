@@ -5,7 +5,7 @@ if ( empty( $data ) ) return;
 
 $title        = $data['title']     ?? null;
 $link         = $data['page_link'] ?? null;
-$sticky_class = $data['is_sticky'] ? ' sticky' : '';
+$sticky_class = $data['is_sticky']  ? ' sticky' : '';
 
 if ( ! $title || ! $link ) return; ?>
 

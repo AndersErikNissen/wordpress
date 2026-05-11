@@ -18,9 +18,9 @@ if ( empty( $items ) ) return; ?>
         </h2>
       </div>
 
-      <p class="sequence__text grid__item p1 laptop:start-7 laptop:end-12">
-        <?php echo esc_html( $item['text'] ); ?>
-      </p>
+      <div class="sequence__text grid__item rte p1 laptop:start-7">
+        <?php echo $item['text']; ?>
+      </div>
     <?php }; ?>
 </div>
 </section>

@@ -190,22 +190,22 @@
   .h1,
   .rte h1,
   .form-section-1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .h2,
   .rte h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .h3,
   .rte h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .h4,
   .rte h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .p0,
@@ -230,7 +230,7 @@
   }
 
   .l1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .l2 {
@@ -291,6 +291,12 @@
     margin: 1.5em 0 0.5em; 
   }
 
+  .rte h2 *, 
+  .rte h3 *, 
+  .rte h4 * { 
+    font-weight: 400;
+  }
+
   .rte blockquote,
   .rte img {
     margin: 1.5rem 0;
@@ -337,6 +343,12 @@
     gap: 1rem;
     padding-left: 1.25rem;
     margin: 2rem 0;
+  }
+
+  .rte ul,
+  .rte ol,
+  .rte ul p,
+  .rte ol p {
     line-height: var(--line-height-2);
   }
 
@@ -377,7 +389,7 @@
   .rte.narrow p:not(:has(img)),
   .rte.narrow ul,
   .rte.narrow ol {
-    max-width: 560px;
+    max-width: 640px;
   }
   
   .rte blockquote p {
@@ -571,8 +583,18 @@
     margin: 4rem 0;
   }
 
+  .section:first-child {
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+
   .background-section {
     padding: 4rem 0;
+  }
+  
+  .section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 4rem;
   }
 
   @media (min-width: 1024px) {
@@ -580,8 +602,16 @@
       margin: 6rem 0;
     }
 
+    .section:first-child {
+      padding-top: 6rem;
+    }
+
     .background-section {
       padding: 6rem 0;
+    }
+    
+    .section:last-child {
+      padding-bottom: 6rem;
     }
   }
 
@@ -689,6 +719,7 @@
     border: currentColor 1px solid;
     flex-direction: column;
     padding: 2rem;
+    align-items: flex-start;
   }
 
   @media (min-width: 480px) {
@@ -756,13 +787,13 @@
   }
 
   .header__logo {
-    width: 4rem;
+    width: 8rem;
     position: relative;
   }
   
   @media (min-width: 1024px) {
     .header__logo {
-      width: 5rem;
+      width: 9rem;
     }
   }
 
@@ -841,17 +872,6 @@
     flex-direction: column;
     gap: 1rem;
     color: var(--color-apple);
-  }
-
-  .footer__dev {
-    color: var(--color-apple);
-    padding-bottom: 0.25rem;
-    font-size: 0.75rem;
-    transition: color var(--transition-hover);
-  }
-
-  .footer__dev:hover {
-    color: var(--color-moss);
   }
 
   .footer__logo {
@@ -948,8 +968,8 @@
 
   /* Icon */
   .icon {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
   }
 
   .icon svg {
@@ -958,7 +978,14 @@
     height: auto;
   }
 
-    /* Ratio container */
+  @media (min-width: 480px) {
+    .icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  /* Ratio container */
   .ratio-container {
     position: relative;
   }
@@ -1098,7 +1125,7 @@
   }
 
   .modal__navigation {
-    padding: 0 2rem;
+    padding: 0 2rem 2rem;
     overflow-y: scroll;
   }
 
@@ -1170,10 +1197,7 @@
 
 #form form > .forminator-row > * {
   padding: 0;
-}
-
-#form form .forminator-upgrade-submit {
-  margin-top: 3rem;
+  width: 100%;
 }
 
 #form form .forminator-upgrade-submit__main .cta__button {
@@ -1242,7 +1266,7 @@
   font-weight: 400;
 }
 
-#form.form .forminator-ui.forminator-design--default .forminator-label:not(.forminator-field-radio .forminator-label, .forminator-field-upload .forminator-label) {
+#form.form .forminator-ui.forminator-design--default .forminator-label:not(.forminator-field-radio .forminator-label, .forminator-field-upload .forminator-label, .forminator-field-consent .forminator-label) {
   position: absolute;
   top: 1.75rem;
   left: 1rem;
@@ -1253,6 +1277,10 @@
   pointer-events: none;
   transform-origin: left center;
   transition: transform 150ms, color 150ms;
+}
+
+#form.form .forminator-ui.forminator-design--default .forminator-field-currency .forminator-label {
+  padding-right: 75px;
 }
 
 #form.form .forminator-ui.forminator-design--default .forminator-label .forminator-required {
@@ -1563,4 +1591,54 @@ body #form.form .forminator-ui.forminator-design--default .forminator-response-m
   padding: 1rem var(--pw-margin); 
   font-size: 1.25rem;
   color: var(--color-forest);
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-row:has(.forminator-field-consent) {
+  background-color: var(--color-apple);
+  color: var(--color-forest);
+  margin: 2rem 0 0;
+  max-width: unset;
+  display: flex;
+  justify-content: center;
+  border-bottom: var(--color-forest) 1px solid;
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-field-consent {
+  max-width: var(--pw);
+  padding: 1rem var(--pw-margin) 1.5rem;
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-field-consent .forminator-label {
+  cursor: auto;
+  margin-bottom: 0.25rem;
+  color: var(--color-forest);
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-field-consent .forminator-checkbox-box {
+  border-color: var(--color-forest);
+  background-color: transparent;
+  color: var(--color-apple);
+  border-radius: 0;
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-checkbox__wrapper {
+  margin-top: 0.25rem;
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-consent input:checked + .forminator-checkbox-box {
+  border-color: var(--color-forest);
+  background-color: var(--color-forest);
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-consent input:checked + .forminator-checkbox-box::before {
+  color: var(--color-apple);
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-field-consent .forminator-error-message {
+  margin: 0 0 0.5rem;
+}
+
+body #form.form .forminator-ui.forminator-design--default .forminator-field-consent .forminator-checkbox__label a {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
 }

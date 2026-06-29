@@ -4,6 +4,7 @@ $data = get_field( 'section_introduction' );
 if ( empty( $data ) ) return;
 
 $title    = $data['title']                   ?? null;
+$text     = $data['text']                    ?? null;
 $buttons  = array_filter( $data['buttons'] ) ?: null; 
 $image    = is_array( $data['image'] )       ? $data['image'] : null;
 $info_box = $data['info_box']                ?? null; 
@@ -16,6 +17,12 @@ if ( ! $title ) return; ?>
         printf( '<h1 class="%s">%s</h1>',
           $info_box ? 'h2' : 'h1', 
           esc_html( $title ) 
+        );
+      } ?>
+
+      <?php if ( $text ) {
+        printf( '<div class="rte p1 mt-2">%s</div>', 
+          $text
         );
       } ?>
 

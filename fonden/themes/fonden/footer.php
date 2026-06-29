@@ -3,6 +3,7 @@
   $contact     = get_field( 'contact', 'option' );
   
   $description  = $company['description']  ?? null;
+  $cvr          = $company['cvr']          ?? null;
   $email        = $contact['email']        ?? null;
   $phone_number = $contact['phone_number'] ?? null;
 ?>    
@@ -13,16 +14,17 @@
         <div class="grid__item footer__main">
           <?php if ( $description ) { ?>
             <div class="footer__description">
-              <p class="h4 mb-1">Fonden</p>
+              <p class="h4 mb-1">Om fonden</p>
+
               <p><?php echo $description; ?></p>
             </div>
           <?php } ?>
           
           <div class="footer__information"> 
-            <div class="footer__contact"> 
-              <p class="h4 mb-1">Kontakt</p>
+            <?php if ( $cvr ||  $email || $phone_number ) { ?>
+              <div class="footer__info"> 
+                <p class="h4 mb-1">Information</p>
 
-              <?php if ( $email || $phone_number ) { ?>
                 <ul class="footer__links">
                   <?php if ( $email ) { ?>
                     <li>
@@ -35,9 +37,15 @@
                       <a href="tel:<?php echo esc_attr( str_replace( ' ', '', $phone_number ) ); ?>"><?php echo esc_html( $phone_number ); ?></a>
                     </li>
                   <?php } ?>
+
+                  <?php if ( $cvr ) { ?>
+                    <li>
+                      <span>CVR: <?php echo $cvr; ?></span>
+                    </li>
+                  <?php } ?>
                 </ul>
-              <?php } ?>
-            </div>
+              </div>
+            <?php } ?>
 
             <div class="footer__navigation">
               <p class="h4 mb-1">Navigation</p>
@@ -49,10 +57,6 @@
               ] ); ?>
             </div>
           </div>
-        </div>
-
-        <div class="grid__item footer__dev">
-          <a href="https://aenders.dk" target="_blank">Udviklet af aenders</a>
         </div>
 
         <div class="grid__item footer__logo">

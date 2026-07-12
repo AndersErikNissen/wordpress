@@ -8,5 +8,4 @@
 6. Copy the content from `/wp-content` to the symlink folder
 7. Rename the the symlink folder `wp-content`
 8. Delete the original `/wp-content` folder
-
-**You are now ready to start coding!**
+9. **Create a new branch, and start coding!**

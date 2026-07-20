@@ -9,9 +9,13 @@ uploads/
 */db.php
 */debug.log
 .DS_Store
+/*/languages/
 
 # Example themes
 /*/themes/twenty*/
 
-# Example plugin
+# Plugins
 /*/plugins/hello.php
+/*/plugins/all-in-one-wp-migration/
+/*/plugins/akismet/
+/*/ai1wm-backups/

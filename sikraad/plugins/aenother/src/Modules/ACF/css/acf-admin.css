@@ -1,0 +1,224 @@
+:root {
+  --aenother-admin-color-white: #fff;
+  --aenother-admin-color-grey: #ddd;
+  --aenother-admin-color-light-grey: #f1f1f1;
+  --aenother-admin-color-dark-grey: ;
+}
+
+/* --- WP Backend --- */
+#side-sortables .postbox {
+  border-radius: 4px;
+  border: none;
+}
+
+#wpcontent #wpbody #major-publishing-actions {
+  border-radius: 0 0 4px 4px;
+}
+
+/* --- TABS --- */
+#wpcontent #wpbody .acf-fields > .acf-tab-wrap {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+#wpcontent #wpbody .acf-fields > .acf-tab-wrap .acf-tab-group {
+  padding-right: 0;
+  padding-left: 0;
+  margin-bottom: 10px;
+  border-bottom: none;
+}
+
+#wpcontent #wpbody .acf-fields > .acf-tab-wrap .acf-tab-group li .acf-tab-button {
+  border-radius: 999px;
+  font-weight: 400;
+  border: 1px solid var(--aenother-admin-color-grey);
+  background: var(--aenother-admin-color-light-grey);
+  padding: 9px 18px;
+}
+
+#wpcontent #wpbody .acf-fields > .acf-tab-wrap .acf-tab-group li:not(.active) .acf-tab-button:hover {
+  background: var(--aenother-admin-color-grey);
+}
+
+#wpcontent #wpbody .acf-fields > .acf-tab-wrap .acf-tab-group li.active .acf-tab-button {
+  background-color: var(--wp-admin-theme-color);
+  border: 1px solid var(--wp-admin-theme-color);
+  color: var(--aenother-admin-color-white);
+}
+
+/* --- ACCORDION --- */
+#wpcontent #wpbody .acf-fields > .acf-field-accordion {
+  border-radius: 4px;
+  overflow: hidden;
+  border: none;
+}
+
+#wpcontent #wpbody .acf-fields > .acf-accordion .acf-accordion {
+  border: 1px solid var(--aenother-admin-color-light-grey);
+}
+
+#wpcontent #wpbody .acf-fields > .acf-accordion + .acf-accordion {
+  margin-top: 8px;
+}
+
+#wpcontent #wpbody .acf-fields > .acf-accordion .acf-accordion-title,
+#wpcontent #wpbody .acf-fields > .acf-accordion .acf-accordion-title label {
+  cursor: pointer;
+}
+
+#wpcontent #wpbody .acf-field-accordion .acf-input > .acf-fields {
+  border-radius: 4px;
+  border: var(--aenother-admin-color-light-grey) 1px solid;
+}
+
+#wpcontent #wpbody .acf-field-accordion .acf-field-accordion .acf-input > .acf-fields,
+#wpcontent #wpbody .acf-accordion-title + .acf-accordion-content > .acf-fields {
+  border-radius: 0;
+  border: none;
+}
+
+#wpcontent #wpbody .acf-postbox > .acf-fields .acf-field-group .acf-fields:has(> .acf-accordion) {
+  border: none;
+}
+
+#wpcontent #wpbody .acf-accordion .acf-accordion .acf-field-group > .acf-input {
+  border: var(--aenother-admin-color-light-grey) 1px solid;
+  border-radius: 4px;
+}
+
+#wpcontent #wpbody .acf-accordion .acf-accordion .acf-field-group > .acf-input > .acf-fields {
+  background-color: transparent;
+}
+
+
+/* --- WYSIWYG --- */
+#wpcontent #wpbody .mce-toolbar-grp {
+  border-bottom: 0;
+}
+
+#wpcontent #wpbody .mce-top-part::before {
+  display: none;
+}
+
+html .mce-panel.mce-menu,
+#wpcontent #wpbody .mce-toolbar-grp,
+#wpcontent #wpbody .mce-toolbar .mce-btn-group .mce-btn.mce-listbox {
+  border-radius: 4px;
+}
+
+#wpcontent #wpbody .acf-editor-wrap .mce-statusbar,
+#wpcontent #wpbody .acf-editor-wrap .wp-editor-container {
+  border: none;
+}
+
+#wpcontent #wpbody .mce-edit-area iframe {
+  border-radius: 4px;
+  border: var(--aenother-admin-color-light-grey) solid 1px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#wpcontent #wpbody .mce-menu .mce-menu-item.mce-active.mce-menu-item-normal {
+  background-color: var(--wp-admin-theme-color);
+}
+
+#wpcontent #wpbody .wp-media-buttons {
+  margin-bottom: 4px;
+}
+
+/* --- TABLE --- */
+#wpcontent #wpbody .acf-table {
+  border-radius: 4px;
+  border-color: var(--aenother-admin-color-light-grey);
+}
+
+#wpcontent #wpbody .acf-table > tbody > tr > th, 
+#wpcontent #wpbody .acf-table > tbody > tr > td, 
+#wpcontent #wpbody .acf-table > thead > tr > th, 
+#wpcontent #wpbody .acf-table > thead > tr > td {
+  background-color: transparent;
+  border-color: var(--aenother-admin-color-light-grey);
+}
+
+/* --- IMAGE UPLOAD --- */
+#wpcontent #wpbody .acf-image-uploader .acf-button {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+/* --- RADIO --- */
+/* - Container for the radio buttons - */
+#wpcontent #wpbody .acf-fields.-left > .acf-field {
+  border: var(--aenother-admin-color-light-grey) 1px solid;
+  border-radius: 4px;
+}
+
+#wpcontent #wpbody .acf-fields.-left > .acf-field::before {
+  background-color: transparent;
+  border-right-color: var(--aenother-admin-color-light-grey);
+}
+
+#wpcontent #wpbody .acf-fields.-left > .acf-field + .acf-field {
+  margin-top: 12px;
+}
+
+/* - The pill shaped buttons - */
+#wpcontent #wpbody .acf-radio-list li {
+  border-radius: 99px;
+  padding: 8px 14px;
+  border: var(--aenother-admin-color-grey) 1px solid;
+  margin: 0 8px 8px 0;
+}
+
+#wpcontent #wpbody .acf-radio-list li:has(.selected) {
+  color: var(--aenother-admin-color-white);
+  background-color: var(--wp-admin-theme-color);
+  border-color: var(--wp-admin-theme-color);
+}
+
+#wpcontent #wpbody .acf-radio-list label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#wpcontent #wpbody .acf-radio-list li,
+#wpcontent #wpbody .acf-radio-list label,
+#wpcontent #wpbody .acf-radio-list label input {
+  cursor: pointer;
+}
+
+#wpcontent #wpbody .acf-radio-list label input[type=radio] {
+  border-color: var(--aenother-admin-color-grey);
+  margin: 0;
+}
+
+#wpcontent #wpbody .acf-radio-list label input[type=radio]:checked {
+  border-color: var(--aenother-admin-color-white);
+}
+
+#wpcontent #wpbody .acf-radio-list label.selected input[type=radio]:checked::before {
+  height: 70%;
+  width: 70%;
+}
+
+/* --- ACF Form (OptionPage) */
+.acf-form-submit {
+  margin-top: 20px;
+  padding: 16px 0;
+  background-color: #f0f0f0;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* --- SELECT --- */
+#wpcontent #wpbody .select2-container .select2-selection--single {
+  height: auto;
+  padding: 6px;
+}
+
+#wpcontent #wpbody .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 7px;
+  right: 7px;
+}

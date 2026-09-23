@@ -10,11 +10,11 @@ class CustomPostTypes extends AbstractModule {
   }
 
   public function register_cpts() {
-    $this->register_cpt( 'expertise', 'ekspertise', 'ekspertiser', 'dashicons-welcome-learn-more' );
-    $this->register_cpt( 'service', 'ydelse', 'ydelser', 'dashicons-editor-ul' );
+    $this->register_cpt( 'person', 'personer', 'dashicons-admin-users' );
+    $this->register_txnmy( 'rolle', 'roller', 'person', 'person_role' );
   }
 
-  private function register_cpt( string $name, string $singular, string $plural, string $dashicons = 'dashicons-id' ) {
+  private function register_cpt( string $singular, string $plural, string $dashicons = 'dashicons-id' ) {
     $labels = [
       'name'               => ucfirst( $plural ),
       'singular_name'      => ucfirst( $singular ),
@@ -29,7 +29,7 @@ class CustomPostTypes extends AbstractModule {
       'menu_name'          => ucfirst( $plural ),
     ];
 
-    register_post_type( $name, [
+    register_post_type( $singular, [
       'labels'             => $labels,
       'public'             => true,
       'has_archive'        => false,

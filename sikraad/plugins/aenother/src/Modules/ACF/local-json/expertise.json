@@ -1,10 +1,10 @@
 {
-    "key": "group_69c5aa3f85ca0",
-    "title": "Side (copy)",
+    "key": "group_6a762c6877628",
+    "title": "Expertise",
     "fields": [
         {
-            "key": "field_69c5aa3f88798",
-            "label": "Generel",
+            "key": "field_6a762c8088ebc",
+            "label": "Indhold",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -21,8 +21,8 @@
             "selected": 0
         },
         {
-            "key": "field_69c5aa3f88b80",
-            "label": "Indhold",
+            "key": "field_6a762c6988ebb",
+            "label": "",
             "name": "content",
             "aria-label": "",
             "type": "group",
@@ -37,13 +37,13 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69c5aa3f900b0",
-                    "label": "Titel",
-                    "name": "title",
+                    "key": "field_6a7cd71a5fcce",
+                    "label": "Navn",
+                    "name": "name",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -58,9 +58,30 @@
                     "append": ""
                 },
                 {
-                    "key": "field_69c5aa3f90880",
-                    "label": "Opsummering",
-                    "name": "summary",
+                    "key": "field_6a7cd7975fccf",
+                    "label": "Akronym",
+                    "name": "acronym",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "En \"forkortelse\" af det fulde navn på denne ekspertise.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6a7cd87a5fcd1",
+                    "label": "Synopsis",
+                    "name": "synopsis",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
@@ -75,13 +96,13 @@
                     "maxlength": "",
                     "allow_in_bindings": 0,
                     "rows": "",
-                    "placeholder": "Beskrive kort denne sides indhold...",
-                    "new_lines": ""
+                    "placeholder": "",
+                    "new_lines": "wpautop"
                 },
                 {
-                    "key": "field_69c5aa3f90c68",
-                    "label": "Hovedindhold",
-                    "name": "content",
+                    "key": "field_6a7cd89e5fcd2",
+                    "label": "Beskrivelse",
+                    "name": "description",
                     "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
@@ -96,14 +117,14 @@
                     "allow_in_bindings": 0,
                     "tabs": "visual",
                     "toolbar": "full",
-                    "media_upload": 1,
+                    "media_upload": 0,
                     "delay": 0
                 }
             ]
         },
         {
-            "key": "field_69c5aa3f88f68",
-            "label": "SEO",
+            "key": "field_6a90840b484ed",
+            "label": "Indstillinger",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -120,9 +141,9 @@
             "selected": 0
         },
         {
-            "key": "field_69c5aa3f89738",
-            "label": "Schema",
-            "name": "seo",
+            "key": "field_6a908424484ee",
+            "label": "",
+            "name": "settings",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -136,51 +157,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_69c5aa3fa3160",
-                    "label": "Navn",
-                    "name": "name",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_69c5aa3fa3548",
-                    "label": "Beskrivelse",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_69c5aa3fa3930",
-                    "label": "Side type",
-                    "name": "page_type",
+                    "key": "field_6a7cde3d53292",
+                    "label": "Farve tema",
+                    "name": "color_theme",
                     "aria-label": "",
                     "type": "radio",
                     "instructions": "",
@@ -192,11 +171,10 @@
                         "id": ""
                     },
                     "choices": {
-                        "AboutPage": "Om os",
-                        "ContactPage": "Kontakt os",
-                        "WebPage": "Almindelig"
+                        "blue": "Lyseblå",
+                        "orange": "Orange"
                     },
-                    "default_value": "WebPage",
+                    "default_value": "light_blue",
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
@@ -205,24 +183,6 @@
                     "save_other_choice": 0
                 }
             ]
-        },
-        {
-            "key": "field_69c5aa3f89b20",
-            "label": "Sektioner",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
         }
     ],
     "location": [
@@ -230,13 +190,13 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "expertise"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
@@ -244,5 +204,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1774561855
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1790102990
 }

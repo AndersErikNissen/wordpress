@@ -1,19 +1,21 @@
 <?php
 /**
  * Plugin Name: Aenother
- * Description: A collection of smaller "plugins" used for themes by aenders.dk
- * Version: 0.1
- * Author: aenders.dk
+ * Description: A plugin used with themes by Aenders.dk
+ * Version: 1.0.0
+ * Author: Aenders.dk
  * Author URI: https://aenders.dk
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // if accessed directly by a user
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
 
 /**
  * Simple PSR-4 Autoloader
- * * This tells PHP: "If you see a class starting with 'Aenother', look for a matching file inside the 'src' folder."
  */
 spl_autoload_register( function ( $class ) {
+  
   $prefix = 'Aenother\\';
   $base_dir = __DIR__ . '/src/';
 
@@ -31,6 +33,6 @@ spl_autoload_register( function ( $class ) {
   if ( file_exists( $file ) ) {
     require $file;
   }
-});
+} );
 
-new Aenother\Core\Loader();
+new Aenother\Modules\ModuleLoader();

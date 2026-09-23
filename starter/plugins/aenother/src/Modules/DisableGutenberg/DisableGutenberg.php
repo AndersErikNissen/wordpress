@@ -1,9 +1,9 @@
 <?php
 namespace Aenother\Modules\DisableGutenberg;
 
-use Aenother\Modules\BaseModule;
+use Aenother\Modules\AbstractModule;
 
-class DisableGutenberg extends BaseModule {
+class DisableGutenberg extends AbstractModule {
 
   public function __construct() {
     // This hook only runs on the frontend

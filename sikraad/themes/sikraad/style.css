@@ -98,13 +98,14 @@
     /* --- Other -------------------------------------------------------------- */
     --max-content-width: 1920px;
     --header-height: 5rem;
-    --content-margin: 0.5rem;
+    --content-margin: 1rem;
     --corners: 1.5rem;
   }
 
   @media (min-width: 768px) {
     :root {
-      --content-margin: 1rem;
+      --header-height: 112px;
+      --content-margin: 2rem;
       --corners: 4rem;
     }
   }
@@ -131,7 +132,7 @@
 
   body {
     color: var(--color-navy);
-    background-color: var(--color-sand);
+    background-color: var(--color-sand--dark);
   }
 
   ::selection {
@@ -141,9 +142,14 @@
   #Template {
     position: relative;
   }
-
+  
   #Content {
+    padding-top: var(--header-height);
+    background-color: var(--color-sand);
+    position: relative;
+    z-index: 1;
     min-height: 80vh;
+    border-bottom-left-radius: 4rem;
   }
 
   @layer typography {
@@ -265,11 +271,12 @@
     }
     
     .rte,
-    .rte-large {
+    .rte--large {
       line-height: 1.4;
+      max-width: 35em;
     }
     
-    .rte-large {
+    .rte--large {
       font-size: 1.5rem;
     }
     
@@ -364,6 +371,7 @@
 
     /* --- Content ------------------------------------------------------------ */
     .content,
+    .content--min,
     .content--max,
     .content--full {
       margin: 0 auto;
@@ -374,7 +382,12 @@
       max-width: var(--max-content-width);  
     }
 
-    .content {
+    .content--min {
+      max-width: calc(var(--max-content-width) / 2);  
+    }
+
+    .content,
+    .content--min {
       padding-right: var(--content-margin);
       padding-left: var(--content-margin);
     }
@@ -383,7 +396,7 @@
   @layer header {
     /* --- The header --------------------------------------------------------- */
     .the-header {
-      position: sticky;
+      position: fixed;
       top: 0;
       width: 100%;
       padding: var(--content-margin);
@@ -405,9 +418,15 @@
 
     .the-header__logo {
       /* Used to scale the different parts of the logo, to match the original proportions, based on the circle <svg> height */
-      --logo-scale: 3rem;
+      --logo-scale: 2.75rem;
       display: flex;
       align-items: center;
+    }
+    
+    @media (min-height: 768px) {
+      .the-header__logo {
+        --logo-scale: 3rem;
+      }
     }
 
     .the-header__logo {
@@ -678,6 +697,41 @@
       display: none;
     }
   }
+
+  @layer footer {
+    .the-footer {
+      position: sticky;
+      bottom: 0;
+      color: var(--color-navy);
+      background-color: var(--color-sand--dark);
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .the-footer__menu {
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+      gap: 0.05em;
+    }
+
+    .the-footer__menu a {
+      display: inline-block;
+      font-family: "Barlow Condensed", system-ui, -apple-system, sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: normal;
+      hyphens: auto;
+    }
+
+    @media (min-width: 768px) {
+      .the-footer__menu {
+        font-size: 2.75rem;
+      }
+    }
+  }
 }
 
 @layer components {
@@ -764,7 +818,7 @@
 }
 
 @layer sections {
-  @layer sections.hero, sections.icon-w-text, sections.expertises;
+  @layer sections.hero, sections.icon-w-text, sections.expertises, sections.partners;
   .section {
     margin: 6rem 0;
   }
@@ -827,7 +881,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      color: var(--color-blue);
+      color: var(--color-blue--dark);
       overflow: hidden;
     }
   
@@ -897,6 +951,7 @@
       flex-direction: column;
       justify-content: flex-end;
       opacity: calc(1 - ((var(--expertise-count) + 1) * var(--progress)));
+      padding: var(--content-margin);
     }
 
     .expertises__slider {
@@ -908,13 +963,19 @@
     }
     
 
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
+      .expertises__description {
+        max-width: 35rem;
+      }
+    }
+
+    @media (min-width: 980px) {
       .expertises__content {
         grid-template-columns: repeat(2, 50%);
       }
       
       .expertises__description {
-        padding-left: var(--content-margin);
+        padding: calc(var(--content-margin) * 2);
       }
     }
 
@@ -925,6 +986,16 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      position: relative;
+    }
+
+    .expertise-btn {
+      margin: 0;
+    }
+
+    .expertise-btn .icon {
+      width: 0.8em;
+      height: 0.8em;
     }
 
     .expertise__acronym {
@@ -936,106 +1007,23 @@
       justify-content: space-between;
       align-items: center;
       gap: var(--content-margin);
+      margin-top: 0.5rem;
     }
   }
 
-  /* 
+  @layer partners {
 
-  
-  
-  .expertises__description {
-    opacity: calc(1 - ((var(--items) + 1) * var(--progress)));
-  }
-
-  .expertises  {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-  }
-
-  .expertises__content {
-    display: flex;
-    min-height: 100vh;
-    
-    gap: var(--content-margin);
-    padding-top: var(--content-margin);
-    padding-bottom: var(--content-margin);
-  }
-
-  @media (max-width: 767px) {
-    .expertises__description {
-      padding-top: 20vh;  
-    }
-
-    .expertises__content,
-    .expertises__description {
-      flex: 0 0 100%;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .expertises {
+    .partners {
+      min-height: 100dvh;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      justify-items: center;
+      margin-top: -50dvh;
     }
 
-    .expertises__description {
-      align-self: end;
-      grid-column: 2 / 7;
-    }
-
-    .expertises__content {
-      grid-column: 7 / -1;
+    .partners__description {
+      margin: 0 auto;
     }
   }
-
-  .expertises__slider {
-    --spacing: calc(var(--content-margin) * (2 + (var(--items, 0) - 1)));
-    transform: translateX(calc((100% * (var(--items) + 1) + var(--spacing)) * var(--progress) * -1));
-    
-    display: flex;
-    gap: var(--content-margin);
-    height: 100%;
-  }
-
-  .expertise {
-    flex: 0 0 100%;
-  }
-
-  .expertises__slider {
-    height: 100%;
-    padding: 2rem;
-    border-radius: var(--corners);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .section-cards__card-name-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .section-cards__card-name-wrapper .h1 {
-    margin-bottom: 0;
-  }
-
-  .section-cards__card-name-wrapper .circle-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .expertices__backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: calc(1 * (var(--progress, 0) * (var(--items, 0) + 1)));
-    background-color: var(--color-navy);
-    z-index: -1;
-  } */
 }
 
 @layer utilities {

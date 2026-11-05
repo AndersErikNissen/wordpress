@@ -436,7 +436,7 @@
         },
         {
             "key": "field_6a6274536de6e",
-            "label": "Logoer",
+            "label": "Udtalelse",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -455,7 +455,7 @@
         {
             "key": "field_6a6274846de6f",
             "label": "",
-            "name": "section_logos",
+            "name": "section_quote",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -468,27 +468,6 @@
             },
             "layout": "block",
             "sub_fields": [
-                {
-                    "key": "field_6a62819b6de70",
-                    "label": "Titel",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
                 {
                     "key": "field_6a6281a36de71",
                     "label": "Tekst",
@@ -511,11 +490,11 @@
                     "new_lines": "wpautop"
                 },
                 {
-                    "key": "field_6a6282776de7a",
-                    "label": "Logoer",
-                    "name": "",
+                    "key": "field_6adcd1b001d91",
+                    "label": "Underskrift",
+                    "name": "signature",
                     "aria-label": "",
-                    "type": "accordion",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -524,201 +503,12 @@
                         "class": "",
                         "id": ""
                     },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_6a6281cd6de72",
-                    "label": "",
-                    "name": "logos",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6a6281f36de73",
-                            "label": "Logo (1)",
-                            "name": "logo_1",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_6a62823c6de74",
-                            "label": "Logo (2)",
-                            "name": "logo_2",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_6a62825a6de76",
-                            "label": "Logo (3)",
-                            "name": "logo_3",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_6a62825b6de77",
-                            "label": "Logo (4)",
-                            "name": "logo_4",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_6a6282606de78",
-                            "label": "Logo (5)",
-                            "name": "logo_5",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_6a62826b6de79",
-                            "label": "Logo (6)",
-                            "name": "logo_6",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        }
-                    ]
-                },
-                {
-                    "key": "field_6a62828b6de7c",
-                    "label": "[end]",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 1
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -872,5 +662,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1785940209
+    "modified": 1792856529
 }

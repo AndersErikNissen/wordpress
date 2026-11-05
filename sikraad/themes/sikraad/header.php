@@ -99,15 +99,14 @@
           <div class="the-menu__main">
             <div class="the-menu__header">
               <?php render_btn(
-                [ 'title' => 'Tilbage' ],
-                [
-                  'class' => 'txt-btn the-menu__close-sub-menu-btn',
+                attributes: [
+                  'class' => 'circle-btn--invert the-menu__close-sub-menu-btn',
                   'data-btn' => 'sub-menu',
                   'data-sub-menu-action' => 'close'
                 ],
-                'arrow-left',
-              ); 
-              
+                icon: 'arrow-left',
+              );
+
               render_btn(
                 attributes: [
                   'class' => 'circle-btn--invert',
@@ -118,25 +117,25 @@
             </div>
 
             <ul class="menu the-menu__menu">
-              <?php foreach( $menu_items as $item ) : $has_sub_menu = isset( $sub_menu_items[ $item->ID ] ); ?>
+              <?php foreach( $menu_items as $item ) { $has_sub_menu = isset( $sub_menu_items[ $item->ID ] ); ?>
                 <li class="menu__item">
-                  <?php if ( $has_sub_menu ) : ?>
+                  <?php if ( $has_sub_menu ) { ?>
                     <button data-btn="sub-menu" data-sub-menu-action="open" data-sub-menu-id="<?= $item->ID ?>">
                       <?= esc_html( $item->title ); ?>
                     </button>
 
                     <?php echo get_icon( 'chevron' ); ?>
 
-                  <?php else : ?>
+                  <?php } else { ?>
                     <a href="<?= esc_url( $item->url ); ?>" >
                       <?= esc_html( $item->title ); ?>
                     </a>
-                  <?php endif; ?>
+                  <?php } ?>
                 </li>
-              <?php endforeach; ?>
+              <?php } ?>
             </ul>
 
-            <?php if ( is_nav_menu( 'menu-footer' ) ) : ?>
+            <?php if ( is_nav_menu( 'menu-footer' ) ) { ?>
               <div class="the-menu__footer">
                 <?php wp_nav_menu( array (
                   'menu'       => 'menu-footer',
@@ -144,20 +143,20 @@
                   'container'  => 'ul'
                   ) ); ?>
               </div>
-            <?php endif; ?>
+            <?php } ?>
 
             <div class="the-menu__sub-menus">
-              <?php foreach( $sub_menu_items as $parent_id => $item_array ) : ?>
+              <?php foreach( $sub_menu_items as $parent_id => $item_array ) { ?>
                 <ul class="menu the-menu__sub-menu" data-sub-menu-parent-id="<?= $parent_id ?>">
-                  <?php foreach ( $item_array as $item ) : ?>
+                  <?php foreach ( $item_array as $item ) { ?>
                     <li class="menu__item">
                       <a href="<?= esc_url( $item->url ); ?>" >
                         <?= esc_html( $item->title ); ?>
                       </a>
                     </li>
-                  <?php endforeach; ?>
+                  <?php } ?>
                 </ul>
-              <?php endforeach; ?>
+              <?php } ?>
             </div>
           </div>
         </nav>

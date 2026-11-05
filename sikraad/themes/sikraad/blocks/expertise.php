@@ -22,10 +22,12 @@ if ( ! $name || ! $acronym ) return; ?>
         <?php echo $acronym; ?>
       </h3>
 
-      <div class="circle-btn--invert">
+      <div class="expertise-btn circle-btn--invert h1">
         <?php echo get_icon( 'arrow-up-right' ); ?>
       </div>
     </div>
+
+    <a class="cover" href="<?php the_permalink(); ?>"></a>
   </div>
 
   <a href="cover"></a>

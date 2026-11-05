@@ -17,6 +17,7 @@ if ( is_404() ) {
       get_template_part( 'sections/hero' );
       get_template_part( 'sections/icon-w-text' );
       get_template_part( 'sections/expertises' );
+      get_template_part( 'sections/partners' );
     } elseif ( is_page() ) {
 
       // get_template_part( 'sections/text' );

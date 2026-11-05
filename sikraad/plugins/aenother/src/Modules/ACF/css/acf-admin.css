@@ -15,6 +15,17 @@
   border-radius: 0 0 4px 4px;
 }
 
+#wpcontent #wpbody .acf-fields>.acf-field:first-child:has(+ .acf-accordion) {
+  border-radius: 4px;
+  border: 1px solid var(--aenother-admin-color-light-grey);
+  margin-bottom: 1rem;
+}
+
+/* OBS: might hide unwanted labels */
+#wpcontent #wpbody .acf-field-group > .acf-label:first-child {
+  display: none;
+}
+
 /* --- TABS --- */
 #wpcontent #wpbody .acf-fields > .acf-tab-wrap {
   background-color: transparent;
@@ -195,11 +206,12 @@ html .mce-panel.mce-menu,
 
 #wpcontent #wpbody .acf-radio-list label input[type=radio]:checked {
   border-color: var(--aenother-admin-color-white);
+  border-width: 2px;
 }
 
 #wpcontent #wpbody .acf-radio-list label.selected input[type=radio]:checked::before {
-  height: 70%;
-  width: 70%;
+  height: 50%;
+  width: 50%;
 }
 
 /* --- ACF Form (OptionPage) */

@@ -1,12 +1,18 @@
 <?php 
   $company     = get_field( 'company', 'option' );
   $contact     = get_field( 'contact', 'option' );
+  $address     = get_field( 'address', 'option' );
   
   $description  = $company['description']  ?? null;
   $cvr          = $company['cvr']          ?? null;
   $email        = $contact['email']        ?? null;
   $phone_number = $contact['phone_number'] ?? null;
-?>    
+  $city_code    = $address['city_code']    ?? null;
+  $city         = $address['city']         ?? null;
+  $street       = $address['street']       ?? null; 
+  
+  $address_str = $street . ', ' . $city_code . ' ' . $city; ?>    
+  
     </main>
     
     <footer class="footer">
@@ -38,6 +44,14 @@
                     </li>
                   <?php } ?>
 
+                  <?php if ( $street || $city_code || $city ) { ?>
+                    <li>
+                      <span>
+                        <?php echo $address_str; ?>
+                      </span>
+                    </li>
+                  <?php } ?>
+                  
                   <?php if ( $cvr ) { ?>
                     <li>
                       <span>CVR: <?php echo $cvr; ?></span>

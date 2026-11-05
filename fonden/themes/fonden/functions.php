@@ -111,7 +111,13 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_action( 'get_footer', function() {
-  wp_enqueue_script( 'index', get_theme_file_uri( 'index.js' ), [], "1.0", TRUE );
+  wp_enqueue_script( 
+    'index', 
+    get_theme_file_uri( 'index.js' ), 
+    [], 
+    wp_get_theme()->get( 'Version' ), 
+    TRUE 
+  );
 } );
 
 // Helpers
